@@ -4,27 +4,27 @@ import React, { useState, useEffect } from 'react';
 import userService from './services/userService';
 
 function App() {
-  const [users, setusers] = useState(null);
+  const [bootcamps, setbootcamps] = useState(null);
 
   useEffect(() => {
-    if (!users) {
-      getusers();
+    if (!bootcamps) {
+      getbootcamps();
     }
   });
 
-  const getusers = async () => {
+  const getbootcamps = async () => {
     let res = await userService.getAll();
-    setusers(res);
+    setbootcamps(res);
   };
 
-  const renderUser = (user) => {
+  const renderBootcamp = (bootcamp) => {
     return (
-      <li key={user._id}>
+      <li key={bootcamp._id}>
         <h3>
-          {`${user.first_name} 
-          ${user.last_name}`}
+          {`${bootcamp.title} 
+          ${bootcamp.company}`}
         </h3>
-        <p>{user.location}</p>
+        <p>{bootcamp.location}</p>
       </li>
     );
   };
@@ -32,10 +32,10 @@ function App() {
   return (
     <div>
       <ul>
-        {users && users.length > 0 ? (
-          users.map((user) => renderUser(user))
+        {bootcamps && bootcamps.length > 0 ? (
+          bootcamps.map((bootcamp) => renderBootcamp(bootcamp))
         ) : (
-          <p>No users found</p>
+          <p>No Bootcamps found</p>
         )}
       </ul>
     </div>

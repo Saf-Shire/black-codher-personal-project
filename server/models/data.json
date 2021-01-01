@@ -1,22 +1,451 @@
 [
-    {
-        "first_name": "Gary",
-        "last_name": "McPherson ",
-        "location": "London"
+  {
+    "title": "Software Engineering immersive",
+    "company": "General Assembly ",
+    "location": [{
+      "city": ["Manchester", "London"],
+      "virtual": true
+    }],
+    "durationType": {
+      "fullTime": { "weeksLength": 12, "totalAmountOfHours": 480 }
     },
-    {
-        "first_name": "Charlene",
-        "last_name": "Hunter ",
-        "location": "London"
+    "free": false,
+    "tuitionFee": 9000,
+    "financialDiscounts": {
+      "earlyPayment": true,
+      "womenDiversity": true
     },
-    {
-        "first_name": "Tanya",
-        "last_name": "Powell ",
-        "location": "London"
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "available": true,
+      "numberOfInstallments": 3,
+      "deposit": true,
+      "depositFee": 185.56
     },
-    {
-        "first_name": "Oyin",
-        "last_name": "Adebayo ",
-        "location": "Birmingham"
+    "additionalInfo": {
+      "applicationCycles": {
+        "manchester": 3,
+        "london": 5
+      },
+      "certification": true,
+      "applicationLink": {
+        "manchester": "generalassemb.ly/education/software-engineering-immersive/manchester",
+        "london": "https://generalassemb.ly/education/software-engineering-immersive/london"
+      }
+    },
+    "contactDetails": {
+      "emailAddress": "onlineadmissions@generalassemb.ly"
     }
+  },
+  {
+    "title": "Web development",
+    "company": "le wagon",
+    "location": {
+      "city": "London",
+      "virtual": true
+    },
+    "durationType": {
+      "fullTime": { "weeksLength": 9, "totalAmountOfHours": 495 },
+      "partTime": { "weeksLength": 24, "totalAmountOfHours": 312 }
+    },
+    "free": false,
+    "tuitionFee": 6500,
+    "financialDiscounts": {
+      "earlyPayment": false,
+      "womenDiversity": false
+    },
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "Available": true,
+      "numberOfInstallments": 6,
+      "deposit": true,
+      "depositFee": 2500,
+      "additonalFee": 500
+    },
+    "additionalInfo": {
+      "applicationCycles": {
+        "london": 1
+      },
+      "certification": true,
+      "applicationLink": {
+        "london": {
+          "fullTime": "https://www.lewagon.com/london/web-development-course/full-time",
+          "partTime": "https://www.lewagon.com/london/web-development-course/part-time"
+        }
+      }
+    },
+    "contactDetails": {
+      "emailAddress": "london@lewagon.org"
+    }
+  },
+  {
+    "title": "Web development",
+    "company": "Makers",
+    "location": {
+      "city": ["London", "Bristol", "Manchester"],
+      "virtual": true
+    },
+    "durationType": {
+      "fullTime": { "weeksLength": 12, "totalAmountOfHours": 660 }
+    },
+    "free": false,
+    "tuitionFee": 8000,
+    "financialDiscounts": {
+      "earlyPayment": { "available": false },
+      "womenDiversity": { "available": true, "amount": 500 }
+    },
+    "laptonLoan": true,
+    "installmentPaymentPlan": {
+      "available": true,
+      "numberOfInstallments": null,
+      "deposit": true,
+      "depositFee": 800
+    },
+    "additionalInfo": {
+      "applicationCycles": {
+        "manchester": 3,
+        "bristol": 3,
+        "london": 3
+      },
+      "certification": true,
+      "applicationLink": {
+        "manchester": "https://apply.makers.tech/application-form?utm_term=coding%20courses&utm_campaign=Manchester&utm_source=adwords&utm_medium=ppc&hsa_acc=7172166340&hsa_cam=11094135975&hsa_grp=109192714032&hsa_ad=463490441880&hsa_src=g&hsa_tgt=kwd-949873038&hsa_kw=coding%20courses&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiArIH_BRB2EiwALfbH1NmDokTuY78LebKNQU6KleMqX3rumHO-U7ieX13nl8bTHhzqe0GeUhoCKBUQAvD_BwE",
+        "bristol": "https://apply.makers.tech/application-form?utm_term=coding%20courses&utm_campaign=Manchester&utm_source=adwords&utm_medium=ppc&hsa_acc=7172166340&hsa_cam=11094135975&hsa_grp=109192714032&hsa_ad=463490441880&hsa_src=g&hsa_tgt=kwd-949873038&hsa_kw=coding%20courses&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiArIH_BRB2EiwALfbH1NmDokTuY78LebKNQU6KleMqX3rumHO-U7ieX13nl8bTHhzqe0GeUhoCKBUQAvD_BwE",
+        "london": "https://apply.makers.tech/application-form?utm_term=coding%20courses&utm_campaign=Manchester&utm_source=adwords&utm_medium=ppc&hsa_acc=7172166340&hsa_cam=11094135975&hsa_grp=109192714032&hsa_ad=463490441880&hsa_src=g&hsa_tgt=kwd-949873038&hsa_kw=coding%20courses&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiArIH_BRB2EiwALfbH1NmDokTuY78LebKNQU6KleMqX3rumHO-U7ieX13nl8bTHhzqe0GeUhoCKBUQAvD_BwE"
+      }
+    },
+    "contactDetails": {
+      "emailAddress": "admissions@makers.tech"
+    }
+  },
+  {
+    "title": "Web development",
+    "company": "School of Code ",
+    "location": {
+      "city": ["Birmingham"],
+      "virtual": true
+    },
+    "durationType": {
+      "fullTime": { "weeksLength": 13, "totalAmountOfHours": 520 }
+    },
+    "free": true,
+    "tuitionFee": null,
+    "financialDiscounts": {
+      "earlyPayment": null,
+      "womenDiversity": null
+    },
+    "laptonLoan": true,
+    "installmentPaymentPlan": {
+      "available": null,
+      "numberOfInstallments": null,
+      "deposit": null,
+      "depositFee": null
+    },
+    "additionalInfo": {
+      "applicationCycles": {
+        "birmingham": 1
+      },
+      "certification": false,
+      "applicationLink": {
+        "birmingham": "https://www.schoolofcode.co.uk/course"
+      }
+    },
+    "contactDetails": {
+      "emailAddress": "info@schoolofcode.co.uk"
+    }
+  },
+  {
+    "title": "Web development",
+    "company": "University of Birmingham",
+    "location": {
+      "city": ["Birmingham"],
+      "virtual": true
+    },
+    "durationType": {
+      "partTime": { "weeksLength": 24, "totalAmountOfHours": 288 }
+    },
+    "free": false,
+    "tuitionFee": 7200,
+    "financialDiscounts": {
+      "earlyPayment": { "available": true, "amount": 700 },
+      "womenDiversity": { "available": true }
+    },
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "available": true,
+      "numberOfInstallments": null,
+      "deposit": true,
+      "depositFee": 500
+    },
+    "additionalInfo": {
+      "applicationCycles": {
+        "birmingham": 1
+      },
+      "certification": true,
+      "applicationLink": {
+        "birmingham": "https://bootcamp.birmingham.ac.uk/coding/"
+      }
+    },
+    "contactDetails": {
+      "telephoneNumber": "+4401212278331"
+    }
+  },
+  {
+    "title": "Web development",
+    "company": "University of Manchester",
+    "location": {
+      "city": ["Manchester"],
+      "virtual": true
+    },
+    "durationType": {
+      "partTime": { "weeksLength": 24, "totalAmountOfHours": 288 }
+    },
+    "free": false,
+    "tuitionFee": 7200,
+    "financialDiscounts": {
+      "earlyPayment": { "available": true, "amount": 700 }
+    },
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "available": true,
+      "numberOfInstallments": null,
+      "deposit": true,
+      "depositFee": 500
+    },
+    "additionalInfo": {
+      "applicationCycles": {
+        "manchester": 1
+      },
+      "certification": true,
+      "applicationLink": {
+        "manchester": "https://bootcamp.manchester.ac.uk/coding/"
+      }
+    },
+    "contactDetails": {
+      "telephoneNumber": "+4401615094261"
+    }
+  },
+  {
+    "title": "Web development",
+    "company": "Northcoders",
+    "location": {
+      "city": ["Manchester", "Leeds"],
+      "virtual": true
+    },
+    "durationType": {
+      "fullTime": { "weeksLength": 14, "totalAmountOfHours": 525 }
+    },
+    "free": false,
+    "tuitionFee": 7200,
+    "financialDiscounts": {
+      "earlyPayment": { "available": true, "amount": 500 },
+      "womenDiversity": { "available": true, "amount": 500 }
+    },
+    "laptonLoan": false,
+    "InstallmentPaymentPlan": {
+      "available": true,
+      "numberOfInstallments": null,
+      "deposit": true,
+      "depositFee": 950
+    },
+    "additionalInfo": {
+      "applicationCycles": {
+        "manchester": 3,
+        "leeds": 3
+      },
+      "certification": false,
+      "applicationLink": {
+        "manchester": "https://northcoders.com/our-courses/coding-bootcamp",
+        "leeds": "https://northcoders.com/our-courses/coding-bootcamp"
+      }
+    },
+    "contactDetails": {
+      "emailAddress": "hello@northcoders.com"
+    }
+  },
+  {
+    "title": "Web development",
+    "company": "Nology",
+    "location": {
+      "city": ["Manchester", "Bristol"],
+      "virtual": true
+    },
+    "durationType": {
+      "fullTime": { "weeksLength": 12, "totalAmountOfHours": 500 }
+    },
+    "free": false,
+    "tuitionFee": 6975,
+    "financialDiscounts": {
+      "earlyPayment": { "available": false, "amount": null },
+      "womenDiversity": { "available": false, "amount": null }
+    },
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "available": false,
+      "numberOfInstallments": null,
+      "deposit": true,
+      "depositFee": 1200
+    },
+    "additionalInfo": {
+      "applicationCycles": {
+        "manchester": 2,
+        "bristol": 2
+      },
+      "certification": false,
+      "applicationLink": {
+        "manchester": "https://nology.io/12-week-software-developer-course/",
+        "bristol": "https://nology.io/12-week-software-developer-course/"
+      }
+    },
+    "contactDetails": {
+      "emailAddress": "hello@nology.io"
+    }
+  },
+  {
+    "title": "Step Into Tech for Women",
+    "company": "BBC",
+    "location": {
+      "city": ["London"],
+      "virtual": true
+    },
+    "durationType": {
+      "fullTime": { "weeksLength": 14, "totalAmountOfHours": 455 }
+    },
+    "free": true,
+    "tuitionFee": null,
+    "financialDiscounts": {
+      "earlyPayment": { "available": null, "amount": null },
+      "womenDiversity": { "available": null, "amount": null }
+    },
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "available": false,
+      "numberOfInstallments": null,
+      "deposit": null,
+      "depositFee": null
+    },
+    "additionalInfo": {
+      "applicationCycles": {
+        "london": 1
+      },
+      "certification": false,
+      "applicationLink": {
+        "london": "https://careerssearch.bbc.co.uk/jobs/job/step-into-tech-bbc-tech-training-course-for-women/40114"
+      }
+    },
+    "contactDetails": {
+      "emailAddress": "?"
+    }
+  },
+  {
+    "title": "Get into tech ",
+    "company": "Sky",
+    "location": {
+      "city": ["Leeds", "London"],
+      "virtual": true
+    },
+    "durationType": {
+      "fullTime": { "weeksLength": 15, "totalAmountOfHours": 75 }
+    },
+    "free": true,
+    "tuitionFee": null,
+    "financialDiscounts": {
+      "earlyPayment": { "available": null, "amount": null },
+      "womenDiversity": { "available": null, "amount": null }
+    },
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "available": false,
+      "numberOfInstallments": null,
+      "deposit": null,
+      "depositFee": null
+    },
+    "additionalInfo": {
+      "applicationCycles": {
+        "leeds": 1,
+        "london": 1
+      },
+      "certification": false,
+      "applicationLink": {
+        "leeds": "https://skyearlycareers.groupgti.com/get-into-tech-course-leeds/413/viewdetails",
+        "london": "https://skyearlycareers.groupgti.com/get-into-tech-course-osterley/412/viewdetails"
+      }
+    },
+    "contactDetails": {
+      "emailAddress": "womenintech@sky.uk"
+    }
+  },
+  {
+    "title": "software engineer fasttrack",
+    "company": "Manchestercodes",
+    "location": {
+      "city": ["London"],
+      "virtual": true
+    },
+    "durationType": {
+      "partTime": { "weeksLength": 24, "totalAmountOfHours": 288 }
+    },
+    "free": false,
+    "tuitionFee": 6000,
+    "financialDiscounts": {
+      "earlyPayment": { "available": null, "amount": null },
+      "womenDiversity": { "available": true, "amount": 600 }
+    },
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "available": true,
+      "numberOfInstallments": 12,
+      "deposit": true,
+      "depositFee": 1000
+    },
+    "additionalInfo": {
+      "applicationCycles": {
+        "manchester": 1
+      },
+      "certification": false,
+      "applicationLink": {
+        "manchester": "https://www.manchestercodes.com/software-engineer-fasttrack"
+      }
+    },
+    "contactDetails": {
+      "emailAddress": "team@manchestercodes.com"
+    }
+  },
+  {
+    "title": "Web development",
+    "company": "Black codher",
+    "location": {
+      "city": ["Birmingham"],
+      "virtual": true
+    },
+    "durationtype": {
+      "fullTime": { "weeksLength": 24, "totalAmountOfHours": 168 }
+    },
+    "free": true,
+    "tuitionFee": null,
+    "financialDiscounts": {
+      "earlyPayment": { "available": null, "amount": null },
+      "womenDiversity": { "available": null, "amount": null }
+    },
+    "laptonLoan": true,
+    "childCare": true,
+    "installmentPaymentPlan": {
+      "available": null,
+      "numberOfInstallments": null,
+      "deposit": null,
+      "depositFee": null
+    },
+    "additionalInfo": {
+      "applicationCycles": {
+        "birmingham": 1
+      },
+      "certification": false,
+      "applicationLink": {
+        "birmingham": "https://blackcodher.com/#apply"
+      }
+    },
+    "contactDetails": {
+      "emailAddress": "hello@blackcodher.com"
+    }
+  }
 ]
