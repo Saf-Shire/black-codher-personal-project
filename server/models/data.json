@@ -2,18 +2,18 @@
   {
     "title": "Software Engineering immersive",
     "company": "General Assembly ",
-    "location": [{
+    "location": {
       "city": ["Manchester", "London"],
       "virtual": true
-    }],
+    },
     "durationType": {
       "fullTime": { "weeksLength": 12, "totalAmountOfHours": 480 }
     },
     "free": false,
     "tuitionFee": 9000,
     "financialDiscounts": {
-      "earlyPayment": true,
-      "womenDiversity": true
+      "earlyPayment":{ "available": true, "amount":""  } ,
+      "womenDiversity": { "available": true, "amount":""  }
     },
     "laptonLoan": false,
     "installmentPaymentPlan": {
