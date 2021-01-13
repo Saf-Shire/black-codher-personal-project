@@ -3,17 +3,18 @@
     "title": "Software Engineering immersive",
     "company": "General Assembly ",
     "location": {
-      "city": ["Manchester", "London"],
-      "virtual": true
+      "city": "Manchester" 
     },
-    "durationType": {
-      "fullTime": { "weeksLength": 12, "totalAmountOfHours": 480 }
-    },
+    "durationType":"Full time",
+    "durationDetails": {"weeksLength": 12, "totalAmountOfHours": 480 },
+    "imageLinks": {
+      "logo":"https://ga-core.s3.amazonaws.com/cms/files/files/000/000/886/original/ga-logo-gear.png" 
+  } ,
     "free": false,
     "tuitionFee": 9000,
     "financialDiscounts": {
-      "earlyPayment":{ "available": true, "amount":""  } ,
-      "womenDiversity": { "available": true, "amount":""  }
+      "earlyPayment":{ "available": true, "amount":450 } ,
+      "womenDiversity": { "available": true, "amount":1500  }
     },
     "laptonLoan": false,
     "installmentPaymentPlan": {
@@ -23,16 +24,43 @@
       "depositFee": 185.56
     },
     "additionalInfo": {
-      "applicationCycles": {
-        "manchester": 3,
-        "london": 5
-      },
+      "applicationCycles":3,
       "certification": true,
-      "applicationLink": {
-        "manchester": "generalassemb.ly/education/software-engineering-immersive/manchester",
-        "london": "https://generalassemb.ly/education/software-engineering-immersive/london"
-      }
+      "applicationLink": "generalassemb.ly/education/software-engineering-immersive/manchester"
     },
+    "contactDetails": {
+      "emailAddress": "onlineadmissions@generalassemb.ly"
+    }
+  },
+  {
+    "title": "Software Engineering immersive",
+    "company": "General Assembly ",
+    "location": {
+      "city":  "London"
+    },
+    "durationType":"Full time",
+    "durationDetails": {"weeksLength": 12, "totalAmountOfHours": 480 },
+    "imageLinks": {
+      "logo":"https://ga-core.s3.amazonaws.com/cms/files/files/000/000/886/original/ga-logo-gear.png" 
+  },
+    "free": false,
+    "tuitionFee": 9000,
+    "financialDiscounts": {
+      "earlyPayment":{ "available": true, "amount":450  } ,
+      "womenDiversity": { "available": true, "amount":1500  }
+    },
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "available": true,
+      "numberOfInstallments": 3,
+      "deposit": true,
+      "depositFee": 185.56
+    },
+    "additionalInfo": {
+      "applicationCycles":5,
+      "certification": true,
+      "applicationLink":"https://generalassemb.ly/education/software-engineering-immersive/london"
+      },
     "contactDetails": {
       "emailAddress": "onlineadmissions@generalassemb.ly"
     }
@@ -41,13 +69,13 @@
     "title": "Web development",
     "company": "le wagon",
     "location": {
-      "city": "London",
-      "virtual": true
+      "city": "London"
     },
-    "durationType": {
-      "fullTime": { "weeksLength": 9, "totalAmountOfHours": 495 },
-      "partTime": { "weeksLength": 24, "totalAmountOfHours": 312 }
-    },
+    "durationType": "Full time",
+    "durationDetails": {"weeksLength": 9, "totalAmountOfHours": 495 },
+    "imageLinks": {
+      "logo":"https://logovtor.com/wp-content/uploads/2020/10/le-wagon-logo-vector.png" 
+  } ,
     "free": false,
     "tuitionFee": 6500,
     "financialDiscounts": {
@@ -63,16 +91,43 @@
       "additonalFee": 500
     },
     "additionalInfo": {
-      "applicationCycles": {
-        "london": 1
-      },
+      "applicationCycles":1 ,
       "certification": true,
-      "applicationLink": {
-        "london": {
-          "fullTime": "https://www.lewagon.com/london/web-development-course/full-time",
-          "partTime": "https://www.lewagon.com/london/web-development-course/part-time"
-        }
-      }
+      "applicationLink":"https://www.lewagon.com/london/web-development-course/full-time" 
+      },
+    "contactDetails": {
+      "emailAddress": "london@lewagon.org"
+    }
+  },
+  {
+    "title": "Web development",
+    "company": "le wagon",
+    "location": {
+      "city": "London"
+    },
+    "durationType":"Part time",
+    "durationDetails":{ "weeksLength": 24, "totalAmountOfHours": 312 } ,
+    "imageLinks": {
+      "logo":"https://logovtor.com/wp-content/uploads/2020/10/le-wagon-logo-vector.png" 
+  },
+    "free": false,
+    "tuitionFee": 6500,
+    "financialDiscounts": {
+      "earlyPayment": false,
+      "womenDiversity": false
+    },
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "Available": true,
+      "numberOfInstallments": 6,
+      "deposit": true,
+      "depositFee": 2500,
+      "additonalFee": 500
+    },
+    "additionalInfo": {
+      "applicationCycles":1 ,
+      "certification": true,
+      "applicationLink":"https://www.lewagon.com/london/web-development-course/part-time"
     },
     "contactDetails": {
       "emailAddress": "london@lewagon.org"
@@ -82,12 +137,13 @@
     "title": "Web development",
     "company": "Makers",
     "location": {
-      "city": ["London", "Bristol", "Manchester"],
-      "virtual": true
+      "city": "London"
     },
-    "durationType": {
-      "fullTime": { "weeksLength": 12, "totalAmountOfHours": 660 }
-    },
+    "durationType": "Full time",
+    "durationDetails":{ "weeksLength": 12, "totalAmountOfHours": 660 } ,
+    "imageLinks": {
+      "logo":"https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/4655/s300/makers-logo-lockupv-black.png" 
+  },
     "free": false,
     "tuitionFee": 8000,
     "financialDiscounts": {
@@ -102,32 +158,91 @@
       "depositFee": 800
     },
     "additionalInfo": {
-      "applicationCycles": {
-        "manchester": 3,
-        "bristol": 3,
-        "london": 3
-      },
+      "applicationCycles":3 ,
       "certification": true,
-      "applicationLink": {
-        "manchester": "https://apply.makers.tech/application-form?utm_term=coding%20courses&utm_campaign=Manchester&utm_source=adwords&utm_medium=ppc&hsa_acc=7172166340&hsa_cam=11094135975&hsa_grp=109192714032&hsa_ad=463490441880&hsa_src=g&hsa_tgt=kwd-949873038&hsa_kw=coding%20courses&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiArIH_BRB2EiwALfbH1NmDokTuY78LebKNQU6KleMqX3rumHO-U7ieX13nl8bTHhzqe0GeUhoCKBUQAvD_BwE",
-        "bristol": "https://apply.makers.tech/application-form?utm_term=coding%20courses&utm_campaign=Manchester&utm_source=adwords&utm_medium=ppc&hsa_acc=7172166340&hsa_cam=11094135975&hsa_grp=109192714032&hsa_ad=463490441880&hsa_src=g&hsa_tgt=kwd-949873038&hsa_kw=coding%20courses&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiArIH_BRB2EiwALfbH1NmDokTuY78LebKNQU6KleMqX3rumHO-U7ieX13nl8bTHhzqe0GeUhoCKBUQAvD_BwE",
-        "london": "https://apply.makers.tech/application-form?utm_term=coding%20courses&utm_campaign=Manchester&utm_source=adwords&utm_medium=ppc&hsa_acc=7172166340&hsa_cam=11094135975&hsa_grp=109192714032&hsa_ad=463490441880&hsa_src=g&hsa_tgt=kwd-949873038&hsa_kw=coding%20courses&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiArIH_BRB2EiwALfbH1NmDokTuY78LebKNQU6KleMqX3rumHO-U7ieX13nl8bTHhzqe0GeUhoCKBUQAvD_BwE"
-      }
+      "applicationLink": "https://apply.makers.tech/application-form?utm_term=coding%20courses&utm_campaign=Manchester&utm_source=adwords&utm_medium=ppc&hsa_acc=7172166340&hsa_cam=11094135975&hsa_grp=109192714032&hsa_ad=463490441880&hsa_src=g&hsa_tgt=kwd-949873038&hsa_kw=coding%20courses&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiArIH_BRB2EiwALfbH1NmDokTuY78LebKNQU6KleMqX3rumHO-U7ieX13nl8bTHhzqe0GeUhoCKBUQAvD_BwE"
+    },
+    "contactDetails": {
+      "emailAddress": "admissions@makers.tech" 
+    }
+  },
+  {
+    "title": "Web development",
+    "company": "Makers",
+    "location": {
+      "city": "Bristol"
+    },
+    "durationType":"Full time",
+    "durationDetails":{ "weeksLength": 12, "totalAmountOfHours": 660 } ,
+    "imageLinks": {
+      "logo":"https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/4655/s300/makers-logo-lockupv-black.png" 
+  },
+    "free": false,
+    "tuitionFee": 8000,
+    "financialDiscounts": {
+      "earlyPayment": { "available": false },
+      "womenDiversity": { "available": true, "amount": 500 }
+    },
+    "laptonLoan": true,
+    "installmentPaymentPlan": {
+      "available": true,
+      "numberOfInstallments": null,
+      "deposit": true,
+      "depositFee": 800
+    },
+    "additionalInfo": {
+      "applicationCycles":3,
+      "certification": true,
+      "applicationLink":"https://apply.makers.tech/application-form?utm_term=coding%20courses&utm_campaign=Manchester&utm_source=adwords&utm_medium=ppc&hsa_acc=7172166340&hsa_cam=11094135975&hsa_grp=109192714032&hsa_ad=463490441880&hsa_src=g&hsa_tgt=kwd-949873038&hsa_kw=coding%20courses&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiArIH_BRB2EiwALfbH1NmDokTuY78LebKNQU6KleMqX3rumHO-U7ieX13nl8bTHhzqe0GeUhoCKBUQAvD_BwE"
     },
     "contactDetails": {
       "emailAddress": "admissions@makers.tech"
-    }
+    }     
+  },
+  {
+    "title": "Web development",
+    "company": "Makers",
+    "location": {
+      "city": "Manchester"
+    },
+    "durationType":"Full time" ,
+    "durationDetails":{ "weeksLength": 12, "totalAmountOfHours": 660 } ,
+    "imageLinks": {
+      "logo":"https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/4655/s300/makers-logo-lockupv-black.png" 
+  },
+    "free": false,
+    "tuitionFee": 8000,
+    "financialDiscounts": {
+      "earlyPayment": { "available": false },
+      "womenDiversity": { "available": true, "amount": 500 }
+    },
+    "laptonLoan": true,
+    "installmentPaymentPlan": {
+      "available": true,
+      "numberOfInstallments": null,
+      "deposit": true,
+      "depositFee": 800
+    },
+    "additionalInfo": {
+      "applicationCycles":3, 
+      "certification": true,
+      "applicationLink":  "https://apply.makers.tech/application-form?utm_term=coding%20courses&utm_campaign=Manchester&utm_source=adwords&utm_medium=ppc&hsa_acc=7172166340&hsa_cam=11094135975&hsa_grp=109192714032&hsa_ad=463490441880&hsa_src=g&hsa_tgt=kwd-949873038&hsa_kw=coding%20courses&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiArIH_BRB2EiwALfbH1NmDokTuY78LebKNQU6KleMqX3rumHO-U7ieX13nl8bTHhzqe0GeUhoCKBUQAvD_BwE"
+    },
+    "contactDetails": {
+      "emailAddress": "admissions@makers.tech"
+    }    
   },
   {
     "title": "Web development",
     "company": "School of Code ",
     "location": {
-      "city": ["Birmingham"],
-      "virtual": true
+      "city": "Birmingham"
     },
-    "durationType": {
-      "fullTime": { "weeksLength": 13, "totalAmountOfHours": 520 }
-    },
+    "durationType":"Full time",
+    "durationDetails":{ "weeksLength": 13, "totalAmountOfHours": 520 } ,
+    "imageLinks": {
+      "logo":"https://d33wubrfki0l68.cloudfront.net/e6fddcbea146f91d2f3c160f7d56a9391a4740b0/4e758/static/logo-51c754388b198e5bbb0d08a971ebbfa2.png" 
+  },
     "free": true,
     "tuitionFee": null,
     "financialDiscounts": {
@@ -142,13 +257,9 @@
       "depositFee": null
     },
     "additionalInfo": {
-      "applicationCycles": {
-        "birmingham": 1
-      },
+      "applicationCycles":1 ,
       "certification": false,
-      "applicationLink": {
-        "birmingham": "https://www.schoolofcode.co.uk/course"
-      }
+      "applicationLink": "https://www.schoolofcode.co.uk/course" 
     },
     "contactDetails": {
       "emailAddress": "info@schoolofcode.co.uk"
@@ -158,48 +269,13 @@
     "title": "Web development",
     "company": "University of Birmingham",
     "location": {
-      "city": ["Birmingham"],
-      "virtual": true
+      "city": "Birmingham"
     },
-    "durationType": {
-      "partTime": { "weeksLength": 24, "totalAmountOfHours": 288 }
-    },
-    "free": false,
-    "tuitionFee": 7200,
-    "financialDiscounts": {
-      "earlyPayment": { "available": true, "amount": 700 },
-      "womenDiversity": { "available": true }
-    },
-    "laptonLoan": false,
-    "installmentPaymentPlan": {
-      "available": true,
-      "numberOfInstallments": null,
-      "deposit": true,
-      "depositFee": 500
-    },
-    "additionalInfo": {
-      "applicationCycles": {
-        "birmingham": 1
-      },
-      "certification": true,
-      "applicationLink": {
-        "birmingham": "https://bootcamp.birmingham.ac.uk/coding/"
-      }
-    },
-    "contactDetails": {
-      "telephoneNumber": "+4401212278331"
-    }
+    "durationType":"Part time",
+    "durationDetails":{ "weeksLength": 24, "totalAmountOfHours": 288 } ,
+    "imageLinks": {
+      "logo":"https://intranet.birmingham.ac.uk/staff/images/brand/download/png/crested-wm-full-colour.png" 
   },
-  {
-    "title": "Web development",
-    "company": "University of Manchester",
-    "location": {
-      "city": ["Manchester"],
-      "virtual": true
-    },
-    "durationType": {
-      "partTime": { "weeksLength": 24, "totalAmountOfHours": 288 }
-    },
     "free": false,
     "tuitionFee": 7200,
     "financialDiscounts": {
@@ -213,13 +289,41 @@
       "depositFee": 500
     },
     "additionalInfo": {
-      "applicationCycles": {
-        "manchester": 1
-      },
+      "applicationCycles":1, 
       "certification": true,
-      "applicationLink": {
-        "manchester": "https://bootcamp.manchester.ac.uk/coding/"
-      }
+      "applicationLink":"https://bootcamp.birmingham.ac.uk/coding/"
+    },
+    "contactDetails": {
+      "telephoneNumber": "+4401212278331"
+    }
+  },
+  {
+    "title": "Web development",
+    "company": "University of Manchester",
+    "location": {
+      "city": "Manchester"
+    },
+    "durationType": "Part time",
+    "durationDetails": { "weeksLength": 24, "totalAmountOfHours": 288 } ,
+    "imageLinks": {
+      "logo":"https://assets.manchester.ac.uk/logos/lo-res/UniLogoTable_colourbackgrounds.png" 
+  },
+    "free": false,
+    "tuitionFee": 7200,
+    "financialDiscounts": {
+      "earlyPayment": { "available": true, "amount": 700 }
+    },
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "available": true,
+      "numberOfInstallments": null,
+      "deposit": true,
+      "depositFee": 500
+    },
+    "additionalInfo": {
+      "applicationCycles":1, 
+      "certification": true,
+      "applicationLink":"https://bootcamp.manchester.ac.uk/coding/" 
     },
     "contactDetails": {
       "telephoneNumber": "+4401615094261"
@@ -229,12 +333,13 @@
     "title": "Web development",
     "company": "Northcoders",
     "location": {
-      "city": ["Manchester", "Leeds"],
-      "virtual": true
+      "city": "Manchester"
     },
-    "durationType": {
-      "fullTime": { "weeksLength": 14, "totalAmountOfHours": 525 }
-    },
+    "durationType": "Full time",
+    "durationDetails":{ "weeksLength": 14, "totalAmountOfHours": 525 } ,
+    "imageLinks": {
+      "logo":"data:image/png;base64,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" 
+  },
     "free": false,
     "tuitionFee": 7200,
     "financialDiscounts": {
@@ -249,15 +354,9 @@
       "depositFee": 950
     },
     "additionalInfo": {
-      "applicationCycles": {
-        "manchester": 3,
-        "leeds": 3
-      },
+      "applicationCycles":3 ,
       "certification": false,
-      "applicationLink": {
-        "manchester": "https://northcoders.com/our-courses/coding-bootcamp",
-        "leeds": "https://northcoders.com/our-courses/coding-bootcamp"
-      }
+      "applicationLink":"https://northcoders.com/our-courses/coding-bootcamp"
     },
     "contactDetails": {
       "emailAddress": "hello@northcoders.com"
@@ -265,19 +364,53 @@
   },
   {
     "title": "Web development",
+    "company": "Northcoders",
+    "location": {
+      "city": "Leeds"
+    },
+    "durationType":"Full time",
+    "durationDetails":{ "weeksLength": 14, "totalAmountOfHours": 525 },
+    "imageLinks": {
+      "logo":"data:image/png;base64,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" 
+  },
+    "free": false,
+    "tuitionFee": 7200,
+    "financialDiscounts": {
+      "earlyPayment": { "available": true, "amount": 500 },
+      "womenDiversity": { "available": true, "amount": 500 }
+    },
+    "laptonLoan": false,
+    "InstallmentPaymentPlan": {
+      "available": true,
+      "numberOfInstallments": null,
+      "deposit": true,
+      "depositFee": 950
+    },
+    "additionalInfo": {
+      "applicationCycles":3,
+      "certification": false,
+      "applicationLink":"https://northcoders.com/our-courses/coding-bootcamp" 
+    },
+    "contactDetails": {
+      "emailAddress": "hello@northcoders.com"
+    }  
+  },
+  {
+    "title": "Web development",
     "company": "Nology",
     "location": {
-      "city": ["Manchester", "Bristol"],
-      "virtual": true
+      "city": "Manchester"
     },
-    "durationType": {
-      "fullTime": { "weeksLength": 12, "totalAmountOfHours": 500 }
-    },
+    "durationType":"Full time",
+    "durationDetails":{ "weeksLength": 12, "totalAmountOfHours": 500 },
+    "imageLinks": {
+      "logo":"https://nology.io/wp-content/themes/nology-main-theme/assets/dist/images/Navbar-Logo-Colour.svg" 
+  },
     "free": false,
     "tuitionFee": 6975,
     "financialDiscounts": {
-      "earlyPayment": { "available": false, "amount": null },
-      "womenDiversity": { "available": false, "amount": null }
+      "earlyPayment": { "available": false },
+      "womenDiversity": { "available": false }
     },
     "laptonLoan": false,
     "installmentPaymentPlan": {
@@ -287,71 +420,63 @@
       "depositFee": 1200
     },
     "additionalInfo": {
-      "applicationCycles": {
-        "manchester": 2,
-        "bristol": 2
-      },
+      "applicationCycles":2 ,
       "certification": false,
-      "applicationLink": {
-        "manchester": "https://nology.io/12-week-software-developer-course/",
-        "bristol": "https://nology.io/12-week-software-developer-course/"
-      }
+      "applicationLink":"https://nology.io/12-week-software-developer-course/" 
     },
     "contactDetails": {
       "emailAddress": "hello@nology.io"
     }
   },
   {
-    "title": "Step Into Tech for Women",
-    "company": "BBC",
+    "title": "Web development",
+    "company": "Nology",
     "location": {
-      "city": ["London"],
-      "virtual": true
+      "city": "Bristol"
     },
-    "durationType": {
-      "fullTime": { "weeksLength": 14, "totalAmountOfHours": 455 }
-    },
-    "free": true,
-    "tuitionFee": null,
+    "durationType":"Full time",
+    "durationDetails":{ "weeksLength": 12, "totalAmountOfHours": 500 },
+    "imageLinks": {
+      "logo":"https://nology.io/wp-content/themes/nology-main-theme/assets/dist/images/Navbar-Logo-Colour.svg" 
+  },
+    "free": false,
+    "tuitionFee": 6975,
     "financialDiscounts": {
-      "earlyPayment": { "available": null, "amount": null },
-      "womenDiversity": { "available": null, "amount": null }
+      "earlyPayment": { "available": false },
+      "womenDiversity": { "available": false}
     },
     "laptonLoan": false,
     "installmentPaymentPlan": {
       "available": false,
       "numberOfInstallments": null,
-      "deposit": null,
-      "depositFee": null
+      "deposit": true,
+      "depositFee": 1200
     },
     "additionalInfo": {
-      "applicationCycles": {
-        "london": 1
-      },
+      "applicationCycles":2,
       "certification": false,
-      "applicationLink": {
-        "london": "https://careerssearch.bbc.co.uk/jobs/job/step-into-tech-bbc-tech-training-course-for-women/40114"
-      }
+      "applicationLink": "https://nology.io/12-week-software-developer-course/" 
     },
     "contactDetails": {
-      "emailAddress": "?"
+      "emailAddress": "hello@nology.io"
     }
   },
   {
     "title": "Get into tech ",
     "company": "Sky",
     "location": {
-      "city": ["Leeds", "London"],
-      "virtual": true
+      "city": "Leeds"
     },
-    "durationType": {
-      "fullTime": { "weeksLength": 15, "totalAmountOfHours": 75 }
-    },
+    "durationType":"Full time",
+    "durationDetails":{ "weeksLength": 15, "totalAmountOfHours": 75 },
+    "imageLinks": {
+      "logo":"data:image/jpeg;base64,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" 
+  },
     "free": true,
     "tuitionFee": null,
     "financialDiscounts": {
-      "earlyPayment": { "available": null, "amount": null },
-      "womenDiversity": { "available": null, "amount": null }
+      "earlyPayment": { "available": false },
+      "womenDiversity": { "available": false }
     },
     "laptonLoan": false,
     "installmentPaymentPlan": {
@@ -361,15 +486,42 @@
       "depositFee": null
     },
     "additionalInfo": {
-      "applicationCycles": {
-        "leeds": 1,
-        "london": 1
-      },
+      "applicationCycles":1 ,
       "certification": false,
-      "applicationLink": {
-        "leeds": "https://skyearlycareers.groupgti.com/get-into-tech-course-leeds/413/viewdetails",
-        "london": "https://skyearlycareers.groupgti.com/get-into-tech-course-osterley/412/viewdetails"
-      }
+      "applicationLink":"https://skyearlycareers.groupgti.com/get-into-tech-course-leeds/413/viewdetails" 
+    },
+    "contactDetails": {
+      "emailAddress": "womenintech@sky.uk"
+    }
+  },
+  {
+    "title": "Get into tech ",
+    "company": "Sky",
+    "location": {
+      "city": "London"
+    },
+    "durationType":"Full time",
+    "durationDetails":{ "weeksLength": 15, "totalAmountOfHours": 75 },
+    "imageLinks": {
+      "logo":"data:image/jpeg;base64,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" 
+  },
+    "free": true,
+    "tuitionFee": null,
+    "financialDiscounts": {
+      "earlyPayment": { "available": false },
+      "womenDiversity": { "available": false }
+    },
+    "laptonLoan": false,
+    "installmentPaymentPlan": {
+      "available": false,
+      "numberOfInstallments": null,
+      "deposit": null,
+      "depositFee": null
+    },
+    "additionalInfo": {
+      "applicationCycles":1,
+      "certification": false,
+      "applicationLink":"https://skyearlycareers.groupgti.com/get-into-tech-course-osterley/412/viewdetails" 
     },
     "contactDetails": {
       "emailAddress": "womenintech@sky.uk"
@@ -379,16 +531,17 @@
     "title": "software engineer fasttrack",
     "company": "Manchestercodes",
     "location": {
-      "city": ["London"],
-      "virtual": true
+      "city": "Manchester"
     },
-    "durationType": {
-      "partTime": { "weeksLength": 24, "totalAmountOfHours": 288 }
-    },
+    "durationType":"Part time",
+    "durationDetails":{ "weeksLength": 24, "totalAmountOfHours": 288 },
+    "imageLinks": {
+      "logo":"https://a.storyblok.com/f/79570/302x64/0779d29aca/mcr_codes_cmyk_trim.png" 
+  },
     "free": false,
     "tuitionFee": 6000,
     "financialDiscounts": {
-      "earlyPayment": { "available": null, "amount": null },
+      "earlyPayment": { "available": false },
       "womenDiversity": { "available": true, "amount": 600 }
     },
     "laptonLoan": false,
@@ -399,13 +552,9 @@
       "depositFee": 1000
     },
     "additionalInfo": {
-      "applicationCycles": {
-        "manchester": 1
-      },
+      "applicationCycles":1 ,
       "certification": false,
-      "applicationLink": {
-        "manchester": "https://www.manchestercodes.com/software-engineer-fasttrack"
-      }
+      "applicationLink":"https://www.manchestercodes.com/software-engineer-fasttrack" 
     },
     "contactDetails": {
       "emailAddress": "team@manchestercodes.com"
@@ -415,34 +564,31 @@
     "title": "Web development",
     "company": "Black codher",
     "location": {
-      "city": ["Birmingham"],
-      "virtual": true
+      "city": "Birmingham"
     },
-    "durationtype": {
-      "fullTime": { "weeksLength": 24, "totalAmountOfHours": 168 }
-    },
+    "durationtype":"Part time",
+    "durationDetails":{ "weeksLength": 24, "totalAmountOfHours": 168 },
+    "imageLinks": {
+      "logo":"https://blackcodher.com/assets/img/Black-Codher-logo.png" 
+  },
     "free": true,
     "tuitionFee": null,
     "financialDiscounts": {
-      "earlyPayment": { "available": null, "amount": null },
-      "womenDiversity": { "available": null, "amount": null }
+      "earlyPayment": { "available": false},
+      "womenDiversity": { "available": false}
     },
     "laptonLoan": true,
     "childCare": true,
     "installmentPaymentPlan": {
-      "available": null,
+      "available":false,
       "numberOfInstallments": null,
       "deposit": null,
       "depositFee": null
     },
     "additionalInfo": {
-      "applicationCycles": {
-        "birmingham": 1
-      },
+      "applicationCycles":1,
       "certification": false,
-      "applicationLink": {
-        "birmingham": "https://blackcodher.com/#apply"
-      }
+      "applicationLink":"https://blackcodher.com/#apply"
     },
     "contactDetails": {
       "emailAddress": "hello@blackcodher.com"
