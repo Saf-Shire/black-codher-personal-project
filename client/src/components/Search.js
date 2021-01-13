@@ -5,6 +5,7 @@ import "../stylesheets/Search.css";
 import Card from "react-bootstrap/Card";
 import { CardGroup, Container } from "react-bootstrap";
 import userService from "../services/userService";
+import axios from "axios";
 
 const Search = (props) => {
   const [searching, setSearching] = useState(false);
@@ -14,14 +15,19 @@ const Search = (props) => {
   const SearchDatabases = async (e) => {
     e.preventDefault();
     setSearching(true);
-    const url = `http://localhost:3000/api/bootcamp?q=${query}`;
+    const url = `http://localhost:5000/api/bootcamp?q=${query}`;
     try {
-      const response = await fetch(url);
-      const data = await response.json();
+      // const response = await fetch(url);
+      // const data = await response.json();
+      const response= await axios.get(url);
+      const data = response.data ;
       setMessage(null);
-      setBootcamps(data.Search);
+      console.log(data);
+      setBootcamps(data);
       setSearching(false);
     } catch (err) {
+      setBootcamps([])
+      console.log(err);
       setMessage("An unexpected error occured.");
       setSearching(false);
     }
@@ -101,6 +107,18 @@ const Search = (props) => {
                     Company:{" "}
                     <span class="font-normal text-base">
                       {bootcamp.company}
+                    </span>
+                  </p>
+                  <p class="font-medium text-lg">
+                    Location:{" "}
+                    <span class="font-normal text-base 1">
+                      {bootcamp.location.city}
+                    </span>
+                  </p>
+                  <p class="font-medium text-lg">
+                    Duration:{" "}
+                    <span class="font-normal text-base 1">
+                      {bootcamp.durationType}
                     </span>
                   </p>
                 </div>
