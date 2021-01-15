@@ -12,6 +12,8 @@ const Search = (props) => {
   const [message, setMessage] = useState(null);
   const [query, setQuery] = useState("");
   const [bootcamps, setBootcamps] = useState([]);
+  const [bootcamplist, setBootcamplist] = useState([]);
+
   const SearchDatabases = async (e) => {
     e.preventDefault();
     setSearching(true);
@@ -19,14 +21,14 @@ const Search = (props) => {
     try {
       // const response = await fetch(url);
       // const data = await response.json();
-      const response= await axios.get(url);
-      const data = response.data ;
+      const response = await axios.get(url);
+      const data = response.data;
       setMessage(null);
-      console.log(data);
+      // console.log(data);
       setBootcamps(data);
       setSearching(false);
     } catch (err) {
-      setBootcamps([])
+      setBootcamps([]);
       console.log(err);
       setMessage("An unexpected error occured.");
       setSearching(false);
@@ -47,20 +49,38 @@ const Search = (props) => {
     setBootcamps(res);
   };
 
+  function favouriteBootcamp(id) {
+    console.log(`The Bootcamp course ${id} was favourited`);
+    const newBootcamps = bootcamps.filter((bootcamp) => id !== bootcamp._id);
+    const chosenBootcamp = bootcamps.filter((bootcamp) => id === bootcamp._id);
+    setBootcamps(newBootcamps);
+    setBootcamplist([...bootcamplist, ...chosenBootcamp]);
+  }
+
+  useEffect(() => {
+    document.title = `${bootcamplist.length} bootcamps saved`;
+  }, [bootcamplist]);
+
+  function removeBootcamp(id) {
+    const newBootcamps = bootcamplist.filter((bootcamp) => {
+      return bootcamp._id !== id;
+    });
+    setBootcamplist(newBootcamps);
+  }
+
   return (
-    <div className="container mx-auto pt-6">
-      <div class="flex justify-center max-w-screen-sm mx-auto overflow-hidden px-10">
-        <Form class="searchBar" onSubmit={SearchDatabases}>
+    <Container className="search-section">
+      <div className="search-header">
+        <Form id="searchBar" onSubmit={SearchDatabases}>
           {/* <Form.Label> Search for a Bootcamp </Form.Label> */}
           <Form.Control
             type="text"
             name="query"
             placeholder="Search bootcamp by name..."
-            class="appearance-none w-full outline-none focus:outline-none active:outline-none"
+            className="form-control"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <i class="fas fa-search"></i>
           <Button type="submit" id="searchbtn">
             <svg
               class="searchicon"
@@ -77,32 +97,32 @@ const Search = (props) => {
         </Form>
       </div>
 
-      <div class="container mx-auto">
+      <Container id="result-section">
         {searching && !message ? (
           <span> loading... </span>
         ) : message ? (
           <div className="message"> {message} </div>
         ) : (
           bootcamps.map((bootcamp) => (
-            <div class="inline-block px-2 w-64 h-64">
+            <Card className="search-result">
               <div
-                class="bg-white rounded-lg overflow-hidden shadow-xl my-8 py-4"
+                className="result-style"
                 key={bootcamp._id}
               >
                 {
-                  <img
+                  <Card.Img
                     src={bootcamp.imageLinks.logo}
                     alt="bootcampimage"
-                    class="w-full h-64"
+                    className="img"
                   />
                 }
-                <div class="p-4">
-                  <p class="font-medium text-lg">
+                <Card.Body className="body">
+                  <Card.Title class="title">
                     Title:{" "}
                     <span class="font-normal text-base leadin-relaxed">
                       {bootcamp.title}
                     </span>
-                  </p>
+                  </Card.Title>
                   <p class="font-medium text-lg">
                     Company:{" "}
                     <span class="font-normal text-base">
@@ -121,13 +141,13 @@ const Search = (props) => {
                       {bootcamp.durationType}
                     </span>
                   </p>
-                </div>
+                </Card.Body>
               </div>
-            </div>
+            </Card>
           ))
         )}
-      </div>
-    </div>
+      </Container>
+    </Container>
   );
 };
 export default Search;
