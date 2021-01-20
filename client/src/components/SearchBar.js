@@ -6,23 +6,25 @@ import Card from "react-bootstrap/Card";
 import "../stylesheets/Search.css";
 import axios from "axios";
 
-const SearchBar = ({ searchDatabases,addBootcamp }) => {
+const SearchBar = ({ searchDatabases, addBootcamp }) => {
   const [searching, setSearching] = useState(false);
   const [message, setMessage] = useState(null);
-  const [query, setQuery] = useState("");
+  // const [query, setQuery] = useState("");
+  const [searchOptions,setSearchOptions]=useState("");
   const [bootcamps, setBootcamps] = useState([]);
   const [savedlist, setSavedlist] = useState([]);
-  
+
   const handleChange = async (e) => {
     e.preventDefault();
     setSearching(true);
-    setQuery(e.target.value);
+    // setQuery(e.target.value);
+    setSearchOptions(e.target.value);
     try {
       const url = `http://localhost:5000/api/bootcamp?q=${e.target.value}`;
       const response = await axios.get(url);
       const data = response.data.bootcamp;
       setMessage(null);
-     console.log(typeof data);
+      console.log(typeof data);
       setBootcamps(data);
       setSearching(false);
     } catch (err) {
@@ -46,103 +48,80 @@ const SearchBar = ({ searchDatabases,addBootcamp }) => {
     document.title = `${savedlist.length} bootcamp(s) saved`;
   }, [savedlist]);
 
- 
-  
-
   return (
-<Container className="search-section">
-    <div className="search-header">
-      <Form id="searchBar" onSubmit={searchDatabases}>
-        {/* <Form.Label> Search for a Bootcamp </Form.Label> */}
-        <Form.Control
-          type="text"
-          name="query"
-          placeholder="Search bootcamp by name..."
-          className="form-control"
-          value={query}
-          onChange={handleChange}
-        />
+    <Container className="search-section">
+      <div className="search-header">
+        <Form id="searchBar" onSubmit={searchDatabases}>
+          <Form.Control
+            type="text"
+            name="query"
+            placeholder="Search bootcamp by name..."
+            className="form-control"
+            value={searchOptions.company}
+            onChange={handleChange}
+          />
 
-        <Button type="submit" id="searchbtn">
-          <svg
-            class="searchicon"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-          </svg>
-        </Button>
-      </Form>
-    </div>
-    <Container id="result-section">
-  {searching && !message ? (
-    <span> loading... </span>
-  ) : message ? (
-    <div className="message"> {message} </div>
-  ) : (
-    bootcamps.map((bootcamp) => (
-      <Card className="search-result">
-        <div className="result-style" key={bootcamp._id}>
-          {
-            <Card.Img
-              src={bootcamp.logo}
-              alt="bootcampimage"
-              className="img"
-            />
-          }
-          <Card.Body className="body">
-            <Card.Title class="title">
-              Title:{" "}
-              <span class="font-normal text-base leadin-relaxed">
-                {bootcamp.title}
-              </span>
-            </Card.Title>
-            <p class="font-medium text-lg">
-              Company:{" "}
-              <span class="font-normal text-base">
-                {bootcamp.company}
-              </span>
-            </p>
-            <p class="font-medium text-lg">
-              Location:{" "}
-              <span class="font-normal text-base 1">
-                {bootcamp.city}
-              </span>
-            </p>
-            <p class="font-medium text-lg">
-              Duration:{" "}
-              <span class="font-normal text-base 1">
-                {bootcamp.durationType}
-              </span>
-            </p>
-            <Button
-              id="controlButtons"
-              onClick={() => favouriteBootcamp(bootcamp._id)}
+          <Button type="submit" id="searchbtn">
+            <svg
+              className="searchicon"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
             >
-              {" "}
-              Add +
-            </Button>
-            {/* <Button
-              id="controlButtons"
-              onClick={() => removeBootcamp(bootcamp._id)}
-            >
-              {" "}
-              Remove -
-            </Button> */}
-          </Card.Body>
-        </div>
-      </Card>
-    ))
-  )}
-</Container>
-
- {/* <Results  searchDatabases={searchDatabases} addBootcamp={addBootcamp} handleChange={handleChange} favouriteBootcamp={favouriteBootcamp} removeBootcamp={removeBootcamp} message={message} setMessage={setMessage} searching={searching} setSearching={setSearching} bootcamps={bootcamps} setBootcamps={setBootcamps}/> */}
-  </Container>
-  
+              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </Button>
+        </Form>
+      </div>
+      <Container id="result-section">
+        {searching && !message ? (
+          <span> loading... </span>
+        ) : message ? (
+          <div className="message"> {message} </div>
+        ) : (
+          bootcamps.map((bootcamp) => (
+            <Card className="search-result">
+              <div className="result-style" key={bootcamp._id}>
+                {
+                  <Card.Img
+                    src={bootcamp.logo}
+                    alt="bootcampimage"
+                    className="img"
+                  />
+                }
+                <Card.Body className="body">
+                  <Card.Text className="card-text">
+                    Title:
+                    <span className="span-text">{bootcamp.title}</span>
+                  </Card.Text>
+                  <Card.Text className="card-text">
+                    Company:
+                    <span className="span-text">{bootcamp.company}</span>
+                  </Card.Text>
+                  <Card.Text className="card-text">
+                    Location:
+                    <span className="span-text">{bootcamp.city}</span>
+                  </Card.Text>
+                  <Card.Text className="card-text">
+                    Duration:
+                    <span className="span-text">{bootcamp.durationType}</span>
+                  </Card.Text>
+                  <Button
+                    id="controlButtons"
+                    onClick={() => favouriteBootcamp(bootcamp._id)}
+                  >
+                    Add +
+                  </Button>
+                </Card.Body>
+              </div>
+            </Card>
+          ))
+        )}
+      </Container>
+    </Container>
   );
 };
 
