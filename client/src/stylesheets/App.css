@@ -1,0 +1,48 @@
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {}
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {}
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {}
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+        .container {
+        width: 90%;
+        margin: 0 auto;
+        }
+        }
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {}
+      
+.App {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fcf3e1;;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  background-color: rgb(174, 145, 130);
+ 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1{
+  margin: 20px;
+  padding: 55px;
+  font-weight: 800px;
+
+}
+
+h1,p {
+  text-align: center;
+
+}

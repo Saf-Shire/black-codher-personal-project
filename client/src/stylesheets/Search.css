@@ -1,0 +1,175 @@
+.search-section {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.5rem;
+}
+.search-header {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+#searchForm {
+  width: 24rem;
+  height: 10rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 2px solid #8e9778;
+
+  background-color: #afb994;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 0em;
+}
+#searchBar {
+  width: 100%;
+  height: 2.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.5rem;
+  --bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  border-radius: 9999px;
+  border: 2px hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 0em;
+}
+.form-control {
+  width: 100%;
+  height: 1.5rem;
+  appearance: none;
+  outline-color: initial;
+  outline-style: initial;
+  outline-width: 0px;
+  appearance: none;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  overflow: visible;
+  margin: 0px;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  box-sizing: border-box;
+  border: 0 solid #e2e8f0;
+}
+.form-control:focus {
+  outline-color: initial;
+  outline-style: initial;
+  outline-width: 0px;
+}
+#searchbtn {
+  margin-left: 0.25rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  text-transform: none;
+  overflow: visible;
+  -webkit-writing-mode: horizontal-tb !important;
+  writing-mode: horizontal-tb;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  margin: 0px;
+  box-sizing: border-box;
+  border: 0 solid #e2e8f0;
+}
+#searchbtn:focus {
+  outline-color: initial;
+  outline-style: initial;
+  outline-width: 0px;
+}
+
+.searchicon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+}
+
+#result-section {
+  padding-top: 1.5rem;
+  padding-left: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.card {
+  width: 26rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  height: 16rem;
+  display: inline-block;
+}
+
+#card-style {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  background-color:black;
+  display: block;
+}
+
+.img {
+  width: 100%;
+  height: 16rem;
+  max-width: 100%;
+  display: block;
+}
+#card-body {
+  padding: 1rem;
+}
+
+.card-text {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.span-text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.card-text,
+.card-title {
+  margin: 0;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.apply-btn {
+  color: black;
+}
+.collapse-text {
+  margin-top: 4;
+}
