@@ -32,7 +32,7 @@ function App() {
               {/* <Filter count={bootcamps.length}/> */}
               <About />
               <LandingPage addBootcamp={addBootcamp} />
-              <Footer />
+             
             </React.Fragment>
           )}
         />
@@ -58,7 +58,8 @@ function App() {
             </React.Fragment>
           )}
         />
-      </Switch>
+      </Switch> 
+      <Footer />
     </BrowserRouter>
   );
 }
