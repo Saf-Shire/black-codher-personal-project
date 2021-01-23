@@ -4,9 +4,10 @@ import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 
 import "./stylesheets/App.css";
+import Jumbotron from "./components/Jumbotron"
 import About from "./pages/About";
-import Footer from "./components/Footer";
 import Filter from "./components/Filter";
+import Copyright from "./components/Copyright";
 import SavedList from "./components/SavedList";
 import Resources from "./pages/Resources";
 
@@ -29,8 +30,9 @@ function App() {
           path="/"
           render={() => (
             <React.Fragment>
-              {/* <Filter count={bootcamps.length}/> */}
-              <About />
+              <Jumbotron/>
+            
+              <Filter /> 
               <LandingPage addBootcamp={addBootcamp} />
              
             </React.Fragment>
@@ -59,7 +61,7 @@ function App() {
           )}
         />
       </Switch> 
-      <Footer />
+      <Copyright />
     </BrowserRouter>
   );
 }
