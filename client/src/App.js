@@ -32,6 +32,7 @@ function App() {
             <React.Fragment>
               <Jumbotron/>
             
+              <Filter /> 
               <LandingPage addBootcamp={addBootcamp} />
              
             </React.Fragment>
