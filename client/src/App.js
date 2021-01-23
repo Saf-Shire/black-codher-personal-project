@@ -6,7 +6,6 @@ import LandingPage from "./components/LandingPage";
 import "./stylesheets/App.css";
 import Jumbotron from "./components/Jumbotron"
 import About from "./pages/About";
-import Filter from "./components/Filter";
 import Copyright from "./components/Copyright";
 import SavedList from "./components/SavedList";
 import Resources from "./pages/Resources";
@@ -32,7 +31,6 @@ function App() {
             <React.Fragment>
               <Jumbotron/>
             
-              <Filter /> 
               <LandingPage addBootcamp={addBootcamp} />
              
             </React.Fragment>
