@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../stylesheets/Search.css";
-import SearchBar from "./SearchBar";
+import SearchForm from "./SearchForm";
 
 const LandingPage = ({addBootcamp}) => {
   
@@ -26,8 +26,7 @@ const LandingPage = ({addBootcamp}) => {
 
   return (
     <React.Fragment>
-
-    <SearchBar addBootcamp={addBootcamp} searchDatabases={searchDatabases} searchOptions={searchOptions} setSearchOptions={setSearchOptions} message={message} setMessage={setMessage}/>
+    <SearchForm addBootcamp={addBootcamp} searchDatabases={searchDatabases} searchOptions={searchOptions} setSearchOptions={setSearchOptions} message={message} setMessage={setMessage}/>
    </React.Fragment>
   );
 };
