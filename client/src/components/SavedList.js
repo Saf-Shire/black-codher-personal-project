@@ -51,7 +51,6 @@ const SavedList = (props, { removeBootcamp }) => {
                   id="controlButtons"
                   onClick={() => unfavouriteBootcamp(bootcamp._id)}
                 >
-                  {" "}
                   Remove -
                 </Button>
               </Card.Body>
