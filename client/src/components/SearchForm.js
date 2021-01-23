@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from "react";
-import {
-  Container,
-  Form,
-  Col,
-  Card,
-  Badge,
-  Button,
-  Collapse,
-} from "react-bootstrap";
-import "../stylesheets/Search.css";
-import Icon from "@material-ui/icons"
 import axios from "axios";
+import { Container, Form, Col, Card } from "react-bootstrap";
+import "../stylesheets/Search.css";
+import Button from "@material-ui/core/Button";
+import StarOutlineIcon from "@material-ui/icons/StarOutline";
+import LanguageIcon from "@material-ui/icons/Language";
+import TimelapseIcon from "@material-ui/icons/Timelapse";
+import LocationIcon from "@material-ui/icons/LocationOn";
+import CreditCardIcon from "@material-ui/icons/CreditCard";
+import RotateRightOutlinedIcon from "@material-ui/icons/RotateRightOutlined";
+import ContactMailOutlinedIcon from "@material-ui/icons/ContactMailOutlined";
+
 
 
 const SearchForm = ({ searchDatabases, addBootcamp }) => {
   const [searching, setSearching] = useState(false);
   const [message, setMessage] = useState(null);
   // const [query,setQuery]=useState("");
+  const [params, setParams] = useState([]);
   const [searchOptions, setSearchOptions] = useState("");
   const [bootcamps, setBootcamps] = useState([]);
   const [savedlist, setSavedlist] = useState([]);
-  const [open, setOpen] = useState(false);
 
   const handleChange = async (e) => {
     e.preventDefault();
@@ -46,21 +46,14 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
   const handleCheck = async (e) => {
     e.preventDefault();
     setSearching(true);
-    setParams(e.target.name);
-    // setQuery(e.target.value);
+    setParams(e.target.value);
     try {
-      const url = `http://localhost:5000/api/bootcamp?q=${e.target.name}`;
+      const url = `http://localhost:5000/api/bootcamp?q=${e.target.value}`;
       const response = await axios.get(url);
       const data = response.data.bootcamp;
-      setMessage(null);
-      console.log(typeof data);
       setBootcamps(data);
-      setSearching(false);
     } catch (err) {
       setBootcamps([]);
-      console.log(err);
-      setMessage("An unexpected error occured.");
-      setSearching(false);
     }
   };
 
@@ -102,7 +95,7 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
               onChange={handleChange}
             />
 
-            <Button type="submit" id="searchbtn">
+            <Button type="submit" className="searchbtn">
               <svg
                 className="searchicon"
                 fill="none"
@@ -136,62 +129,42 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
                   />
                 }
                 <Card.Body id="card-body">
-                  <Card.Text className="card-text">
-                    Title:
-                    <span className="span-text">{bootcamp.title}</span>
-                  </Card.Text>
+                  <Card.Text className="card-title">{bootcamp.title}</Card.Text>
                   <Card.Text className="card-text">
                     Company:
                     <span className="span-text">{bootcamp.company}</span>
                   </Card.Text>
-                  <Card.Text className="card-text">
-                    Location:
-                    <span className="span-text">{bootcamp.city}</span>
-                  </Card.Text>
-                  <Card.Text className="card-text">
-                    Duration:
-                    <span className="span-text">{bootcamp.durationType}</span>
-                  </Card.Text>
+                  <LocationIcon />
+                  <span className="span-text">{bootcamp.city}</span>
+                  <TimelapseIcon />
+                  <span className="span-text">
+                    {bootcamp.durationType}|{bootcamp.weeksLength} weeks|{bootcamp.totalAmountOfHours}
+                  </span>
+                  <CreditCardIcon />
+                  <span className="span-text">£{bootcamp.tutionFee}</span>
+                  <RotateRightOutlinedIcon />
+                  <span className="span-text">{bootcamp.applicationCycles} application cycle(s) </span>
+                  <ContactMailOutlinedIcon/>
+                  <span className="span-text">{bootcamp.emailAddress} application cycle(s) </span>
                   <Button
                     id="controlButtons"
                     onClick={() => favouriteBootcamp(bootcamp._id)}
+                    endIcon={<StarOutlineIcon />}
                   >
-                    Add +
+                    Favourite
                   </Button>
+                  {/* <a  href={encodeURIComponent(bootcamp.applicationLink)}>
+            Apply 
+          </a> */}
 
-                  {/* <Button
-                    type="button"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.assign("{bootcamp.applicationLink}");
-                    }}
+                  <Button
+                    className="apply-btn"
+                    href={encodeURIComponent(bootcamp.applicationLink)}
+                    target="_blank"
+                    endIcon={<LanguageIcon />}
                   >
-                    {" "}
-                    Apply here
-                  </Button> */}
-
-                  <div className="wrap-collapse">
-                    <Button
-                      onClick={() => setOpen(!open)}
-                      aria-controls="collapse-element"
-                      aria-expanded={open}
-                      variant="primary"
-                    >
-                      {open ? "Hide Details" : "View Details"}
-                    </Button>
-
-                    <Collapse in={open}>
-                      <div id="collapse-element">
-                        <Button
-                          className="apply-btn"
-                          href="{bootcamp.applicationLink}"
-                          target="_blank"
-                        >
-                          Apply
-                        </Button>
-                      </div>
-                    </Collapse>
-                  </div>
+                    Apply
+                  </Button>
                 </Card.Body>
               </div>
             </Card>
