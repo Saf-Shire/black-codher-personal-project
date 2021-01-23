@@ -1,10 +1,18 @@
 [
-    {
-    "name":"",
-    "imageLink":"",
-    "description":""
-    },
-    {
+  {
+    "name": "Mozilla",
+    "imageLink": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEUAAAD////q6uqZmZlvb2/6+vrl5eX39/dERESDg4OdnZ1iYmLy8vJ7e3uQkJClpaXZ2dmrq6u/v7/S0tLKysq0tLTh4eGJiYk0NDRVVVVqamp0dHRMTEyurq7W1tYVFRUsLCwcHBwLCws8PDwkJCTDw8MoKChCQkIyMjLA4TPOAAAE0klEQVR4nO3d2XLiMBAF0BgCxLExxuAAhgRC1v//woEhIWw2WrrVEnXP41RNRbe8Sa2FuzsAAAAAAAAAAAAAAAAAAAAAAAAAgGC8P1TZoCyKohxOZu/SrSH2Gpd5Kzry9FxJt4pMUp6E2xtNptKNszcr05p4O93BQrqJVh7rrt6htAj1fp19KMT7vV/j74P/+ZbM40lcPYg1XUmVq+fb3a9lNq+q/mOZ937/qTeeS8eolTxp5quTxtJRLlroXr8m3TfpOGfeC8J8W/fSiU5MOsQBPYs4pbxB9zy6UWOOfJtnUTrXHvUTuDeRTrbzptKDMZNKZ/svYcu3kUinu2N7BH8MpeNtOtmsAaNcOh93wCi6+YCRcNmjzR5Q+HvB+5LZEX0Q5w4CRpFgtePeScDoSSzgzE3AKHoUCrhwFTCK+iIBH9wFjKKBQMAV/XC3Sf7lOuBrc7mXQbm88YAbz9/XG0aGbzzYqHBWKqaqiep7cVMpZqk5qeoM+S/kSDLgVh7zvnXYik4aOsWML2Apne5H2l7xBHyWTnZgzFGl4h/Sa2mRd8odDOl1fZBeyIl0nIu6dEMPRyNeffn6xgNuvh4kc1SstXtbKUEfwOmIV9/HrQeMIttFVtPe9b8hy7LQsfY+YDSyCigypNdkVVVdd6Wbr6Blk1BuSK8hNf/qr4MIaDMLlwzaNfwaaHAsvRGt15xhmKJ6kc50jH6F2Fg60gnyuWIfClJHqIf7vhSk/jzTBhxI5zlXkgb0sF4TFZQBvazXUF5DF2tM9BE+h57Wa9pkAX2t15Dtv3G2xkQX1V4xb+s1VuPDA1PpILWIPhbf/tZraDrePtdrSALe5WmrjnQph2Y5eFMlZCickH3XrXRBg7RTeol4T/yTOaB4T5x7U4abxdBNmAPK98Qz3oDyPXHm3V8edFR5d/V7EJB3K+2baEe1MxoX2StrwKVowJJokUkD0Z54i3F54i+mmdNeXrbjKkmqfjb86NbtCXCy85JjYrE3PF2ntoiL81sld7Lim2FyrVuzjPs7O5ro6rk5M4NhMXRT3+QzHv3csGmb/w3DEzC9ti9mPetnWd/VZr1p//6CxGIjhtwmPB1f5gGpqoHMzGsZnZV029WYb2jz6pyWepVxwLF00xWZL14I5IC6T+OA9utf3TCvuPlwgIkK4454IF8Ki5lFqe3ousyX2Hh03lUj44Ch3KR944ShfAzNlyoG8hhazH/LHAqhzWKlWyAvGouym3TT1VjMXnSk267GYsVwGIN78x5bMB+LpXmFhnbpKyPjq8g8v0nINGIgn8MtwyJ4KIPDLbMXalCnzxttwlhJt1qLQd8tkA/+nv4Yyo9zdDUkulVhf457VjXV/Pa/SDfYgN7EWyi10iNaazGD6bQd0RlLSZyJSGCpXrWh2+vimPKdGlC39MRMsa4R6q/pbKkVwR0sbeJTqVxG5yeT0lK4jC7P7OQwuzouDv+n5rLmgD23Z8uyWDX+hFdwQ4uLFg2rGEOZWrtmXjvgCG/wVGdSs2A6kIq3ksnFr2OIw8N6kwv3qt0ZXf7pn71zghwAN1qcFFXZdw4KWLUPH8gwh/hXJX+lYw9+z4lJf7wrOwZaxFCyvN9upLjlhFuLLNwiBgAAAAAAAAAAAAAAAAAAAADcqn9KZVD90jcDYwAAAABJRU5ErkJggg==",
+    "refLink": "https://developer.mozilla.org/en-US/"
+  },
+  {
+    "name": "W3schools",
+    "imageLink": "https://upload.wikimedia.org/wikipedia/commons/3/3e/W3Schools_logo.png",
+    "refLink": ""
+  },
+  {
+    "name": "Freecodecamp",
+    "imageLink": "https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png",
 
-    }
-    ]
+    "refLink": "https://www.freecodecamp.org/"
+  }
+]

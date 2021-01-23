@@ -1,9 +1,17 @@
 [
     {
-    "name":"",
-    "imageLink":"",
+    "name":"Codewars",
+    "imageLink":"https://www.codewars.com/assets/landing/logo-by-q-b02277e06ebda16eeaf3890c1c6b2e7fd35e8d8fd3ecdcc11061932cbbab9957.png",
+    "webLink":"https://www.codewars.com/"
+},
+    {
+        "name":"Coderbyte",
+        "imageLink":"https://coderbytestaticimages.s3.amazonaws.com/consumer-v2/nav/coderbyte_logo_digital_multi_light.png",
+        "webLink":"https://coderbyte.com/ "
     },
     {
-
+        "name":"Hacker rank",
+        "imageLink":"https://www.hackerrank.com/wp-content/uploads/2018/08/hackerrank_logo.png",
+        "webLink":""
     }
     ]
