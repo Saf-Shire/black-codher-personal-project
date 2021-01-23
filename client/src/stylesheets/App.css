@@ -46,3 +46,25 @@ h1,p {
   text-align: center;
 
 }
+.jumbo {
+  background: url("../assets/keyboard.jpg") no-repeat fixed bottom;
+  background-size: cover;
+  color: #efefef;
+  height: 200px;
+  position: relative;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  line-height: 0.75rem;
+  padding:10px ;
+}
+.overlay {
+  background-color: rgb(253, 253, 253);
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1; 
+}

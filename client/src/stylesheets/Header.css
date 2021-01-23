@@ -1,14 +1,56 @@
-.navbar {
-    background:  linear-gradient(90deg, #afb994 20%,  #8e9778 100%) ;
-    display:flex;
-    justify-content: space-between;
-    
+
+*{
+  box-sizing: border-box;
+}
+
+.header{
+  
+  background:  linear-gradient(90deg, #afb994 20%,  #8e9778 100%) ;
+
+}
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+
+}
+
+.nabvar{
+  display: flex;
+
+}
+.nav-link{
+  padding-left: .75rem;
+    padding-right: .75rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    color:  #efefef;
+
+
+
+}
+/* .navbar {
+display:flex;
+ justify-content:space-between; 
+ align-items: center;
+  background:  linear-gradient(90deg, #afb994 20%,  #8e9778 100%) ;
   }
+
+ .navbar-brand 
   a, .navbar-brand, .navbar-nav .nav-link   {
     color:  #efefef;
+
     }
 
     a:hover, .navbar-brand:hover, .navbar-nav:hover .nav-link:hover {
         color: white;
     }
+    button{
+
+    } */
    
