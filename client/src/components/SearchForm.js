@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Container, Form, Card } from "react-bootstrap";
+import { Container, Form, Card, Row } from "react-bootstrap";
 import "../stylesheets/Search.css";
 import Button from "@material-ui/core/Button";
 import StarOutlineIcon from "@material-ui/icons/StarOutline";
@@ -15,7 +15,8 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
   const [searching, setSearching] = useState(false);
   const [message, setMessage] = useState(null);
   // const [query,setQuery]=useState("");
-  const [params, setParams] = useState([]);
+  const [params, setParams] = useState("");
+
   const [searchOptions, setSearchOptions] = useState("");
   const [bootcamps, setBootcamps] = useState([]);
   const [savedlist, setSavedlist] = useState([]);
@@ -73,38 +74,68 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
       <div className="search-header">
         <Form id="searchForm" onSubmit={searchDatabases}>
           <Form.Group>
+            <Form.Control as="select" id="inputCity">
+              <Form.Label for="inputCity">Location</Form.Label>
+              <option value={params.city}>Manchester</option>
+              <option value={params.city}>London</option>
+              <option value={params.city}>Bristol</option>
+              <option value={params.city}>Birmingham</option>
+              <option value={params.city}>Leeds</option>
+
+              <br />
+            </Form.Control>
+          </Form.Group>
+          <Form.Group>
             <Form.Check
               onChange={handleCheck}
               type="checkbox"
               value={params.free}
               label="Only Free"
             ></Form.Check>
+                        <Form.Check
+              onChange={handleCheck}
+              type="checkbox"
+              value={params.free}
+              label="Childcare "
+            ></Form.Check>
+                        <Form.Check
+              onChange={handleCheck}
+              type="checkbox"
+              value={params.free}
+              label="Laptop loan"
+            ></Form.Check>
+                        <Form.Check
+              onChange={handleCheck}
+              type="checkbox"
+              value={params.free}
+              label="Certification"
+            ></Form.Check>
 
-            <Form.Row id="searchBar">
-              <Form.Control
-                type="text"
-                name="query"
-                placeholder="Search bootcamp by name..."
-                className="form-control"
-                value={searchOptions.company}
-                // value={query}
-                onChange={handleChange}
-              />
+          </Form.Group>
+          <Form.Group as={Row} id="searchBar">
+            <Form.Control
+              type="text"
+              name="query"
+              placeholder="Search bootcamp by name..."
+              className="form-control"
+              value={searchOptions.company}
+              // value={query}
+              onChange={handleChange}
+            />
 
-              <Button type="submit" className="searchbtn">
-                <svg
-                  className="searchicon"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-              </Button>
-            </Form.Row>
+            <Button type="submit" className="searchbtn">
+              <svg
+                className="searchicon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </Button>
           </Form.Group>
         </Form>
       </div>
