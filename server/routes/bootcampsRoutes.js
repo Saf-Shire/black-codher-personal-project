@@ -8,7 +8,7 @@ module.exports = (app) => {
     let searchOptions = {};
     let q = req.query.q;
     if (q != null && q!== "undefined" && q !== "") {
-      searchOptions.company = new RegExp(q, "i");
+      searchOptions.company = new RegExp(q, "i"); 
     }
     try {
       const results = await Bootcamp.find(searchOptions);
