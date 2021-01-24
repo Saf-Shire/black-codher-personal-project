@@ -1,56 +1,33 @@
 
-*{
-  box-sizing: border-box;
-}
 
-.header{
-  
-  background:  linear-gradient(90deg, #afb994 20%,  #8e9778 100%) ;
-
-}
-.container{
-  margin-left: auto;
-  margin-right: auto;
+.navbar {
+  background-color: black;
+  display:flex;
   justify-content: space-between;
-  display: flex;
-  width: 100%;
-
+  
 }
+.navbar-brand{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+ .navbar-nav{
+  display: inline-flex;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 
-.nabvar{
-  display: flex;
-
+ 
 }
 .nav-link{
-  padding-left: .75rem;
-    padding-right: .75rem;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    display: inline-flex;
-    color:  #efefef;
-
-
-
+ padding-left: .75rem;
+ padding-right: .75rem;
 }
-/* .navbar {
-display:flex;
- justify-content:space-between; 
- align-items: center;
-  background:  linear-gradient(90deg, #afb994 20%,  #8e9778 100%) ;
+a, .navbar-brand, .navbar-nav .nav-link   {
+  color:  #e9e7e7;
   }
 
- .navbar-brand 
-  a, .navbar-brand, .navbar-nav .nav-link   {
-    color:  #efefef;
-
-    }
-
-    a:hover, .navbar-brand:hover, .navbar-nav:hover .nav-link:hover {
-        color: white;
-    }
-    button{
-
-    } */
+  a:hover, .navbar-brand:hover, .navbar-nav:hover .nav-link:hover {
+      color:white;
+  }
+ 
    

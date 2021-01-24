@@ -1,7 +1,5 @@
 .search-section {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 1.5rem;
 }
 .search-header {
@@ -14,7 +12,7 @@
   padding-right: 2.5rem;
 }
 #searchForm {
-  width: 24rem;
+  width: 50rem;
   height: 10rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -23,11 +21,17 @@
   background-color: #afb994;
   border-radius: 25px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: relative;
   margin-top: 0em;
 }
+.form-group {
+  display: block;
+  margin-left: 8rem;
+  margin-block-end: 1em;
+}
+
+
 #searchBar {
   width: 100%;
   height: 2.5rem;
@@ -38,20 +42,15 @@
   border-radius: 9999px;
   border: 2px hidden;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: relative;
-  margin-top: 0em;
+  margin-top: 1.5em;
 }
 .form-control {
   width: 100%;
   height: 1.5rem;
-  appearance: none;
-  outline-color: initial;
-  outline-style: initial;
-  outline-width: 0px;
-  appearance: none;
-  padding: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
   line-height: inherit;
   color: black;
   overflow: visible;
@@ -111,6 +110,7 @@
 }
 
 #result-section {
+  justify-content: center;
   padding-top: 1.5rem;
   padding-left: 8rem;
   margin-left: auto;
@@ -119,7 +119,7 @@
 }
 
 .card {
-  width: 26rem;
+  width: 30.7rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   height: 16rem;
@@ -135,7 +135,7 @@
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   border: 2px solid #8e9778;
-    background-color: #afb994;
+  background-color: #afb994;
   display: block;
 }
 
@@ -151,19 +151,19 @@
 .card-title {
   font-size: 1.125rem;
   line-height: 1.75rem;
-  word-break: break-all;
   font-weight: bold;
   text-align: center;
 }
 .card-text {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1.5rem;
+  color: black;
 }
 
 .span-text {
+  margin-left: 0.5rem;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.4rem;
+  color: black;
 }
 .card-text,
 .card-title {
@@ -174,9 +174,7 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-.apply-btn {
+.link-btn {
   color: black;
-}
-.collapse-text {
-  margin-top: 4;
+  align-items: flex-end;
 }
