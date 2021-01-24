@@ -2,8 +2,9 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import ShortCourses from "../components/ShortCourses";
 import Youtube from "../components/Youtube";
-import Network from "../components/Network";
-
+import Practice from "../components/Practice";
+import Reference from "../components/Reference";
+import CodingHelp from "../components/CodingHelp";
 
 const Resources = () => {
   return (
@@ -13,14 +14,11 @@ const Resources = () => {
       <h2>Some of the best Web development youtubers</h2>
       <Youtube />
       <h2> Put your skills into practice...</h2>
-      {/* <Practice /> */}
+      <Practice />
+      <h2>Read about tips , accessibility and more..</h2>
+      <Reference/>
       <h2>Getting stuck?</h2>
-      {/* <CodingHelp /> */}
-      <h2>Find a network near you </h2>
-      <Network />
-      <h2>Start applying for your dream job</h2>
-      {/* <JobSupport/> */}
-      {/* <Reference/> */}
+      <CodingHelp />
     </Container>
   );
 };
