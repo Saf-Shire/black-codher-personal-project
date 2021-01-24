@@ -1,6 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import references from "../data/reference.json";
+import Button from "@material-ui/core/Button";
+import CreateOutlinedIcon from "@material-ui/icons/CreateOutlined";
 
 const Reference = () => {
   return (
@@ -9,13 +11,23 @@ const Reference = () => {
         references.map((reference) => (
           <Card className="card">
             <div id="card-style" key={reference.name}>
-              <h3>{reference.name}</h3>
               <Card.Img
                 src={reference.imageLink}
                 alt={reference.name}
                 className="img"
               />
-              <p> {reference.refLink} </p>
+              <Card.Body id="card-body">
+                <Card.Text className="card-title">{reference.name}</Card.Text>
+                <Button
+                  className="link-btn"
+                  href={reference.refLink}
+                  target="_blank"
+                  size="large"
+                  endIcon={<CreateOutlinedIcon/>}
+                >
+                  Take note
+                </Button>
+              </Card.Body>
             </div>
           </Card>
         ))
