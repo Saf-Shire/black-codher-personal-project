@@ -1,10 +1,12 @@
 [
-    {
-    "name":"Stack overflow",
-    "imageLink":""
-    },
-    {
-        "company":"",
-        "imageLink":""
-    }
-    ]
+  {
+    "name": "Stack overflow",
+    "imageLink": "https://miro.medium.com/max/1200/0*UEtwA2ask7vQYW06.png",
+    "webLink": "https://stackoverflow.com/"
+  },
+  {
+    "name": "Codebar",
+    "imageLink": "https://images.app.goo.gl/jR9xQUMoYNTao2WC7",
+    "webLink": "https://codebar.io/"
+  }
+]
