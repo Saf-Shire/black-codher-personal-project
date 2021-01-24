@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Container, Form, Col, Card } from "react-bootstrap";
+import { Container, Form, Card } from "react-bootstrap";
 import "../stylesheets/Search.css";
 import Button from "@material-ui/core/Button";
 import StarOutlineIcon from "@material-ui/icons/StarOutline";
@@ -10,8 +10,6 @@ import LocationIcon from "@material-ui/icons/LocationOn";
 import CreditCardIcon from "@material-ui/icons/CreditCard";
 import RotateRightOutlinedIcon from "@material-ui/icons/RotateRightOutlined";
 import ContactMailOutlinedIcon from "@material-ui/icons/ContactMailOutlined";
-
-
 
 const SearchForm = ({ searchDatabases, addBootcamp }) => {
   const [searching, setSearching] = useState(false);
@@ -74,41 +72,40 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
     <Container className="search-section">
       <div className="search-header">
         <Form id="searchForm" onSubmit={searchDatabases}>
-          <Form.Row>
-            <Form.Group as={Col}>
-              <Form.Check
-                onChange={handleCheck}
-                type="checkbox"
-                value={params.free}
-                label="Only Free"
-              ></Form.Check>
-            </Form.Group>
-          </Form.Row>
-          <Form.Row id="searchBar">
-            <Form.Control
-              type="text"
-              name="query"
-              placeholder="Search bootcamp by name..."
-              className="form-control"
-              value={searchOptions.company}
-              // value={query}
-              onChange={handleChange}
-            />
+          <Form.Group>
+            <Form.Check
+              onChange={handleCheck}
+              type="checkbox"
+              value={params.free}
+              label="Only Free"
+            ></Form.Check>
 
-            <Button type="submit" className="searchbtn">
-              <svg
-                className="searchicon"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-            </Button>
-          </Form.Row>
+            <Form.Row id="searchBar">
+              <Form.Control
+                type="text"
+                name="query"
+                placeholder="Search bootcamp by name..."
+                className="form-control"
+                value={searchOptions.company}
+                // value={query}
+                onChange={handleChange}
+              />
+
+              <Button type="submit" className="searchbtn">
+                <svg
+                  className="searchicon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </Button>
+            </Form.Row>
+          </Form.Group>
         </Form>
       </div>
 
@@ -129,41 +126,50 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
                   />
                 }
                 <Card.Body id="card-body">
-                  <Card.Text className="card-title">{bootcamp.title}</Card.Text>
-                  <Card.Text className="card-text">
-                    Company:
-                    <span className="span-text">{bootcamp.company}</span>
+                  <Card.Text className="card-title">
+                    {bootcamp.company} - {bootcamp.title}
                   </Card.Text>
-                  <LocationIcon />
-                  <span className="span-text">{bootcamp.city}</span>
-                  <TimelapseIcon />
-                  <span className="span-text">
-                    {bootcamp.durationType}|{bootcamp.weeksLength} weeks|{bootcamp.totalAmountOfHours}
-                  </span>
-                  <CreditCardIcon />
-                  <span className="span-text">£{bootcamp.tutionFee}</span>
-                  <RotateRightOutlinedIcon />
-                  <span className="span-text">{bootcamp.applicationCycles} application cycle(s) </span>
-                  <ContactMailOutlinedIcon/>
-                  <span className="span-text">{bootcamp.emailAddress} application cycle(s) </span>
+                  <Card.Text className="card-text">
+                    <LocationIcon />
+                    <span className="span-text">{bootcamp.city}</span>
+                  </Card.Text>
+                  <Card.Text className="card-text">
+                    <TimelapseIcon />
+                    <span className="span-text">
+                      {bootcamp.durationType}| {bootcamp.weeksLength} weeks |{" "}
+                      {bootcamp.totalAmountOfHours} hours
+                    </span>
+                  </Card.Text>
+                  <Card.Text className="card-text">
+                    <CreditCardIcon />
+                    <span className="span-text">£{bootcamp.tuitionFee}</span>
+                  </Card.Text>
+                  <Card.Text className="card-text">
+                    <RotateRightOutlinedIcon />
+                    <span className="span-text">
+                      {bootcamp.applicationCycles} application cycle(s)
+                    </span>
+                  </Card.Text>
+                  <Card.Text className="card-text">
+                    <ContactMailOutlinedIcon />
+                    <span className="span-text">{bootcamp.emailAddress}</span>
+                  </Card.Text>
                   <Button
-                    id="controlButtons"
-                    onClick={() => favouriteBootcamp(bootcamp._id)}
-                    endIcon={<StarOutlineIcon />}
-                  >
-                    Favourite
-                  </Button>
-                  {/* <a  href={encodeURIComponent(bootcamp.applicationLink)}>
-            Apply 
-          </a> */}
-
-                  <Button
-                    className="apply-btn"
-                    href={encodeURIComponent(bootcamp.applicationLink)}
+                    className="link-btn"
+                    href={bootcamp.applicationLink}
                     target="_blank"
+                    size="large"
                     endIcon={<LanguageIcon />}
                   >
                     Apply
+                  </Button>
+                  <Button
+                    id="controlButtons"
+                    onClick={() => favouriteBootcamp(bootcamp._id)}
+                    size="large"
+                    endIcon={<StarOutlineIcon />}
+                  >
+                    Favourite
                   </Button>
                 </Card.Body>
               </div>
