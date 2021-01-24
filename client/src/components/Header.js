@@ -5,10 +5,13 @@ import "../stylesheets/Header.css";
 
 const Header = () => {
   return (
-    <Navbar >
+    <Navbar     >
       <Navbar.Brand href="/">Techiton</Navbar.Brand>
 
-      <Nav className="navbar-nav">
+      <Nav className="navbar-nav"    data-aos="flip-left"
+    data-aos-delay="50"
+    data-aos-duration="2000"
+    data-aos-easing="ease-in-out-cubic">
         <Nav.Item >
           <Nav.Link>
             <Link to="/" exact>Home</Link>
