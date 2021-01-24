@@ -10,7 +10,7 @@ const Jumbotron = () => {
       <Container>
         <div>
           <h1><strong>TechitOn</strong></h1>
-          <p className="lead"> Start your journey to become a web developer by searching for the bootcamp that suits you. </p>
+          <h2> Start your journey to become a web developer by searching for the bootcamp that suits you. </h2>
 
         </div>
       </Container>
