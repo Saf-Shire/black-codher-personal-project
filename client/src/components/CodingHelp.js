@@ -1,6 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import codinghelp from "../data/codinghelp.json";
+import Button from "@material-ui/core/Button";
+import ContactSupportSharpIcon from "@material-ui/icons/ContactSupportSharp";
 
 const CodingHelp = () => {
   return (
@@ -9,12 +11,19 @@ const CodingHelp = () => {
         codinghelp.map((help) => (
           <Card className="card">
             <div id="card-style" key={help.name}>
-              <h3>{practice.name}</h3>
-              <Card.Img
-                src={codinghelp.imageLink}
-                alt={codinghelp.name}
-                className="img"
-              />
+              <Card.Img src={help.imageLink} alt={help.name} className="img" />
+              <Card.Body id="card-body">
+                <Card.Text className="card-title">{help.name} </Card.Text>
+              </Card.Body>
+              <Button
+                  className="link-btn"
+                  href={help.webLink}
+                  target="_blank"
+                  size="large"
+                  endIcon={<ContactSupportSharpIcon />}
+                >
+                  Ask 
+                </Button>
             </div>
           </Card>
         ))
