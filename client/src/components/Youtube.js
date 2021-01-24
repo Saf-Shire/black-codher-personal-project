@@ -1,6 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import youtubers from "../data/youtube.json";
+import Button from "@material-ui/core/Button";
+import YouTubeIcon from "@material-ui/icons/YouTube";
 
 const Youtube = () => {
   return (
@@ -9,13 +11,23 @@ const Youtube = () => {
         youtubers.map((youtuber) => (
           <Card className="card">
             <div id="card-style" key={youtuber.name}>
-              <h3>{youtuber.name}</h3>
               <Card.Img
                 src={youtuber.imageLink}
                 alt={youtuber.name}
                 className="img"
               />
-              <p> {youtuber.channelLink} </p>
+              <Card.Body id="card-body">
+                <Card.Text className="card-title">{youtuber.name}</Card.Text>
+                <Button
+                  className="link-btn"
+                  href= {youtuber.channelLink}
+                  target="_blank"
+                  size="large"
+                  endIcon={<YouTubeIcon/>}
+                >
+                  Watch
+                </Button>
+              </Card.Body>
             </div>
           </Card>
         ))
