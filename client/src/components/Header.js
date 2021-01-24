@@ -5,37 +5,32 @@ import "../stylesheets/Header.css";
 
 const Header = () => {
   return (
-    <Header className="header">
-      <div className="container"> 
-      
-        <Nav className="navbar">
-          <Navbar.Brand href="/">Techiton</Navbar.Brand>
-          <Nav.Link className="nav-link">
+    <Navbar >
+      <Navbar.Brand href="/">Techiton</Navbar.Brand>
+
+      <Nav className="navbar-nav">
+        <Nav.Item >
+          <Nav.Link>
             <Link to="/" exact>Home</Link>
           </Nav.Link>
-          <Nav.Link className="nav-link">
-            <Link to="/about">About</Link>
+        </Nav.Item>
+        <Nav.Item >
+          <Nav.Link>
+            <Link to="/search" exact>Find your course</Link>
           </Nav.Link>
-          <Nav.Link className="nav-link">
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link>
             <Link to="/saved">Saved</Link>
           </Nav.Link>
-          <Nav.Link className="nav-link">
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link>
             <Link to="/resources"> Resources</Link>
           </Nav.Link>
-        </Nav>
-      </div>
-    </Header>
-
-    // <Navbar expand="lg">
-    //   <Navbar.Brand href="/">Techiton</Navbar.Brand>
-    //   <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-    //   <Navbar.Collapse id="basic-navbar-nav">
-    //          <Nav >
-       
-       
-    //   </Nav> 
-    //   </Navbar.Collapse>
-    // </Navbar>
+        </Nav.Item>
+      </Nav>
+    </Navbar>
   );
 };
 
