@@ -5,7 +5,6 @@ import LandingPage from "./components/LandingPage";
 
 import "./stylesheets/App.css";
 import Jumbotron from "./components/Jumbotron"
-import About from "./pages/About";
 import Copyright from "./components/Copyright";
 import SavedList from "./components/SavedList";
 import Resources from "./pages/Resources";
@@ -31,11 +30,21 @@ function App() {
             <React.Fragment>
               <Jumbotron/>
             
+           
+            </React.Fragment>
+          )}
+        />
+         <Route
+          exact
+          path="/search"
+          render={() => (
+            <React.Fragment>
+          
               <LandingPage addBootcamp={addBootcamp} />
              
             </React.Fragment>
           )}
-        />
+        />       
 
         <Route
           exact
