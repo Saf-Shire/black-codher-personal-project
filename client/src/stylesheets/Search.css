@@ -138,19 +138,27 @@
 }
 
 .img {
-  width: 100%;
+  /* width: 100%;
   height: 16rem;
   max-width: 100%;
-  display: block;
+  display: block; */
+  height:8rem;
+  width:10rem ;
+  
 }
 #card-body {
   padding: 1rem;
+}
+.img-inline{
+  display: flex;
+  padding-left: 1.5rem;
 }
 .card-title {
   font-size: 1.2rem;
   line-height: 1.75rem;
   font-weight: bold;
   text-align: center;
+  padding-left: 1rem;
 }
 .card-text {
   font-size: 1rem;
