@@ -157,9 +157,9 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
                   />
                 }
                 <Card.Body id="card-body">
-                  <Card.Text className="card-title">
+                  <Card.Title className="card-title">
                     {bootcamp.company} - {bootcamp.title}
-                  </Card.Text>
+                  </Card.Title>
                   <Card.Text className="card-text">
                     <LocationIcon />
                     <span className="span-text">{bootcamp.city}</span>
@@ -174,6 +174,14 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
                   <Card.Text className="card-text">
                     <CreditCardIcon />
                     <span className="span-text">£{bootcamp.tuitionFee}</span>
+                  </Card.Text>
+                  <Card.Text className="card-text">
+                  Help available:
+                    <span className="span-text">{bootcamp.availableHelp[0]}|{bootcamp.availableHelp[1]}</span>
+                  </Card.Text>
+                  <Card.Text className="card-text">
+                  Discounts available:
+                    <span className="span-text">{bootcamp.availableDiscounts[0]}|{bootcamp.availableDiscounts[1]}</span>
                   </Card.Text>
                   <Card.Text className="card-text">
                     <RotateRightOutlinedIcon />
