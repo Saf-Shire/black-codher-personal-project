@@ -12,15 +12,17 @@ const Shortcourse = () => {
         shortcourses.map((shortcourse) => (
           <Card className="card">
             <div id="card-style" key={shortcourse.company}>
-              <Card.Img
-                src={shortcourse.imageLink}
-                alt={shortcourse.company}
-                className="img"
-              />
               <Card.Body id="card-body">
-                <Card.Text className="card-title">
-                  {shortcourse.company}
-                </Card.Text>
+                <div className="img-inline">
+                  <Card.Img
+                    src={shortcourse.imageLink}
+                    alt={shortcourse.company}
+                    className="img"
+                  />
+                  <Card.Text className="card-title">
+                    {shortcourse.company}
+                  </Card.Text>
+                </div>
                 <Card.Text className="card-text">
                   <MenuBookIcon />
                   <span className="span-text">{shortcourse.title}</span>{" "}

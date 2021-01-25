@@ -11,13 +11,16 @@ const Youtube = () => {
         youtubers.map((youtuber) => (
           <Card className="card">
             <div id="card-style" key={youtuber.name}>
-              <Card.Img
+
+              <Card.Body id="card-body">
+              <div className="img-inline">
+                              <Card.Img
                 src={youtuber.imageLink}
                 alt={youtuber.name}
                 className="img"
               />
-              <Card.Body id="card-body">
                 <Card.Text className="card-title">{youtuber.name}</Card.Text>
+                </div>
                 <Button
                   className="link-btn"
                   href= {youtuber.channelLink}

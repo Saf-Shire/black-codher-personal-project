@@ -11,13 +11,15 @@ const Reference = () => {
         references.map((reference) => (
           <Card className="card">
             <div id="card-style" key={reference.name}>
-              <Card.Img
+              <Card.Body id="card-body">
+              <div className="img-inline">
+                              <Card.Img
                 src={reference.imageLink}
                 alt={reference.name}
                 className="img"
               />
-              <Card.Body id="card-body">
                 <Card.Text className="card-title">{reference.name}</Card.Text>
+                </div>
                 <Button
                   className="link-btn"
                   href={reference.refLink}

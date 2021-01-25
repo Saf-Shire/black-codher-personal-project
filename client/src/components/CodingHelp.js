@@ -11,9 +11,11 @@ const CodingHelp = () => {
         codinghelp.map((help) => (
           <Card className="card">
             <div id="card-style" key={help.name}>
-              <Card.Img src={help.imageLink} alt={help.name} className="img" />
               <Card.Body id="card-body">
+              <div className="img-inline">
+                <Card.Img src={help.imageLink} alt={help.name} className="img" />
                 <Card.Text className="card-title">{help.name} </Card.Text>
+                </div>
               </Card.Body>
               <Button
                   className="link-btn"

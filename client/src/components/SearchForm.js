@@ -92,25 +92,24 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
               value={params.free}
               label="Only Free"
             ></Form.Check>
-                        <Form.Check
+            <Form.Check
               onChange={handleCheck}
               type="checkbox"
               value={params.free}
               label="Childcare "
             ></Form.Check>
-                        <Form.Check
+            <Form.Check
               onChange={handleCheck}
               type="checkbox"
               value={params.free}
               label="Laptop loan"
             ></Form.Check>
-                        <Form.Check
+            <Form.Check
               onChange={handleCheck}
               type="checkbox"
               value={params.free}
               label="Certification"
             ></Form.Check>
-
           </Form.Group>
           <Form.Group as={Row} id="searchBar">
             <Form.Control
@@ -149,17 +148,18 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
           bootcamps.map((bootcamp) => (
             <Card className="card">
               <div id="card-style" key={bootcamp._id}>
-                {
-                  <Card.Img
-                    src={bootcamp.logo}
-                    alt={bootcamp.company}
-                    className="img"
-                  />
-                }
                 <Card.Body id="card-body">
-                  <Card.Title className="card-title">
-                    {bootcamp.company} - {bootcamp.title}
-                  </Card.Title>
+                  <div className="img-inline">
+                    <Card.Img
+                      src={bootcamp.logo}
+                      alt={bootcamp.company}
+                      className="img"
+                    />
+                    <Card.Title className="card-title">
+                      {bootcamp.company} - {bootcamp.title}
+                    </Card.Title>
+                  </div>
+
                   <Card.Text className="card-text">
                     <LocationIcon />
                     <span className="span-text">{bootcamp.city}</span>
@@ -176,12 +176,17 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
                     <span className="span-text">£{bootcamp.tuitionFee}</span>
                   </Card.Text>
                   <Card.Text className="card-text">
-                  Help available:
-                    <span className="span-text">{bootcamp.availableHelp[0]}|{bootcamp.availableHelp[1]}</span>
+                    Help available:
+                    <span className="span-text">
+                      {bootcamp.availableHelp[0]}|{bootcamp.availableHelp[1]}
+                    </span>
                   </Card.Text>
                   <Card.Text className="card-text">
-                  Discounts available:
-                    <span className="span-text">{bootcamp.availableDiscounts[0]}|{bootcamp.availableDiscounts[1]}</span>
+                    Discounts available:
+                    <span className="span-text">
+                      {bootcamp.availableDiscounts[0]}|
+                      {bootcamp.availableDiscounts[1]}
+                    </span>
                   </Card.Text>
                   <Card.Text className="card-text">
                     <RotateRightOutlinedIcon />
