@@ -49,7 +49,8 @@ h1{
 h2{
   color:white ;
   margin-top: 4rem;
-  word-break: break-all;
+  word-break: break-word;
+  line-height: 1.43
 }
 .jumbo {
   background: url("../assets/jumbo.jpg") no-repeat fixed bottom;
