@@ -5,7 +5,8 @@ import LandingPage from "./components/LandingPage";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./stylesheets/App.css";
-import Jumbotron from "./components/Jumbotron"
+import Jumbotron from "./components/Jumbotron";
+import Intro from "./components/Intro";
 import Copyright from "./components/Copyright";
 import SavedList from "./components/SavedList";
 import Resources from "./pages/Resources";
@@ -20,7 +21,9 @@ function App() {
     setSavedBootcamp([]);
   }
   useEffect(() => {
-    AOS.init();
+    AOS.init(
+      {once: true}
+    );
     AOS.refresh();
   }, []);
 
@@ -34,6 +37,7 @@ function App() {
           render={() => (
             <React.Fragment>
               <Jumbotron/>
+              <Intro/>
             
            
             </React.Fragment>
