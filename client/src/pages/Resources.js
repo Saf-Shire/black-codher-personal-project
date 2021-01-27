@@ -9,7 +9,7 @@ import CodingHelp from "../components/CodingHelp";
 const Resources = () => {
   return (
     <Container id="result-section">
-      <h2>Here are some free short courses</h2>
+      <h2 data-aos="fade-left"data-aos-delay="200">Here are some free short courses</h2>
       <ShortCourses />
       <h2>Some of the best Web development youtubers</h2>
       <Youtube />
