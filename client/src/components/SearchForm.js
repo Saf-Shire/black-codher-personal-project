@@ -146,7 +146,7 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
           <div className="message"> {message} </div>
         ) : (
           bootcamps.map((bootcamp) => (
-            <Card className="card">
+            <Card className="card"data-aos="fade-in">
               <div id="card-style" key={bootcamp._id}>
                 <Card.Body id="card-body">
                   <div className="img-inline">
