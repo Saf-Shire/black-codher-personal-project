@@ -8,10 +8,9 @@ const Header = () => {
     <Navbar     >
       <Navbar.Brand href="/">Techiton</Navbar.Brand>
 
-      <Nav className="navbar-nav"    data-aos="flip-left"
-    data-aos-delay="50"
+      <Nav className="navbar-nav"    data-aos="zoom-in-up"
     data-aos-duration="2000"
-    data-aos-easing="ease-in-out-cubic">
+    >
         <Nav.Item >
           <Nav.Link>
             <Link to="/" exact>Home</Link>
