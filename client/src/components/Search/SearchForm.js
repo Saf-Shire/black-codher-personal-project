@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Container, Form, Card, Row } from "react-bootstrap";
-import "../stylesheets/Search.css";
+import "../../stylesheets/Search.css";
 import Button from "@material-ui/core/Button";
 import StarOutlineIcon from "@material-ui/icons/StarOutline";
 import LanguageIcon from "@material-ui/icons/Language";
@@ -15,9 +15,10 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
   const [searching, setSearching] = useState(false);
   const [message, setMessage] = useState(null);
   // const [query,setQuery]=useState("");
-  const [params, setParams] = useState("");
 
   const [searchOptions, setSearchOptions] = useState("");
+  const [params, setParams] = useState("");
+
   const [bootcamps, setBootcamps] = useState([]);
   const [savedlist, setSavedlist] = useState([]);
 
@@ -89,7 +90,7 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
             <Form.Check
               onChange={handleCheck}
               type="checkbox"
-              value={params.free}
+              value={params.Free}
               label="Only Free"
             ></Form.Check>
             <Form.Check
@@ -146,7 +147,7 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
           <div className="message"> {message} </div>
         ) : (
           bootcamps.map((bootcamp) => (
-            <Card className="card"data-aos="fade-in">
+            <Card className="card" data-aos="fade-zoom-in">
               <div id="card-style" key={bootcamp._id}>
                 <Card.Body id="card-body">
                   <div className="img-inline">
