@@ -1,14 +1,13 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Header from "./components/Header";
-import LandingPage from "./components/LandingPage";
+import Header from "./components/App/Header";
+import LandingPage from "./components/Search/LandingPage";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./stylesheets/App.css";
-import Jumbotron from "./components/Jumbotron";
-import Intro from "./components/Intro";
-import Copyright from "./components/Copyright";
-import SavedList from "./components/SavedList";
+import Footer from "./components/App/Footer";
+import Intro from "./components/Home/Intro";
+import SavedList from "./components/Saved/SavedList";
 import Resources from "./pages/Resources";
 
 function App() {
@@ -21,39 +20,32 @@ function App() {
     setSavedBootcamp([]);
   }
   useEffect(() => {
-    AOS.init(
-      {once: true}
-    );
+    AOS.init({ once: true });
     AOS.refresh();
   }, []);
 
   return (
     <BrowserRouter>
-    <Header/>
+      <Header />
       <Switch>
         <Route
           exact
           path="/"
           render={() => (
             <React.Fragment>
-              <Jumbotron/>
-              <Intro/>
-            
-           
+              <Intro />
             </React.Fragment>
           )}
         />
-         <Route
+        <Route
           exact
           path="/search"
           render={() => (
             <React.Fragment>
-          
               <LandingPage addBootcamp={addBootcamp} />
-             
             </React.Fragment>
           )}
-        />       
+        />
 
         <Route
           exact
@@ -72,12 +64,12 @@ function App() {
           path="/resources"
           render={() => (
             <React.Fragment>
-              <Resources/>
+              <Resources />
             </React.Fragment>
           )}
         />
-      </Switch> 
-      <Copyright />
+      </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
