@@ -29,7 +29,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.43;
   letter-spacing: 0.01071em;
-  background-color:black;
+  background-color: rgb(247, 247, 255);
  
 }
 
@@ -39,41 +39,49 @@ code {
 }
 
 h1{
-  padding-top: 3.5rem;
   font-size:10rem ;
+  color:#efefef;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  margin-block-start:0.335em;
+  margin-block-end:0.335em;
 }
 
 
 h2{
-  color:white ;
-  margin-top: 4rem;
+  color:#efefef;
   word-break: break-word;
-  line-height: 1.43
+  line-height: 1.43;
+  text-align:center;
 }
-.jumbo {
-  background: url("../assets/jumbo.jpg") no-repeat fixed bottom;
-  background-size: cover;
-  color: #efefef;
-  position: relative;
-  z-index: -2;
-  display: flex;
-  justify-content: center;
-  line-height: 0.75rem;
-  padding:10px ;
-  height: 100vh;
+h3{
+  color:rgb(47, 57, 66) ;
+  line-height: 1.43;
+  text-align:center;
+}
 
+.intro-wrapper{
+  background-color:#afb994; 
+  display: flex;
+  position: relative;
+ 
+ 
 }
-.overlay {
-  background-color: rgb(253, 253, 253);
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1; 
+.intro-content{
+  justify-content: center;
+  padding-bottom:  3rem; 
+ 
+}
+
+.button-wrapper{
+  display: block;
+  justify-content: center;
+  padding-bottom:  1.5rem; 
+  margin-left: 24rem;
+  width:fit-content;
+  
+}
+#link-btn{
+  align-items: center;
 }
 
 .copyright{
@@ -85,13 +93,11 @@ body::-webkit-scrollbar {
 }
  
 body::-webkit-scrollbar-track {
-  background: linear-gradient(
-    90deg
-    ,#434343,#434343 1px,#111 0,#111);
+  background:white;
 }
  
 body::-webkit-scrollbar-thumb {
-  background: #434343;
+  background:#afb994;
   border-radius: 16px;
   box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
 }
