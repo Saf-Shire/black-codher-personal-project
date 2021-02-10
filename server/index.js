@@ -16,8 +16,8 @@ app.use(cors());
 mongoose.Promise = global.Promise;
 mongoose.connect(
   process.env.MONGODB_URI ||
-    // `mongodb://localhost:27017/blackcodher`,
-    `mongodb+srv://saf1997:5bhbCg0w9Xiw9NBM@cluster0.0zgtx.mongodb.net/blackcodher?`,
+     `mongodb://localhost:27017/blackcodher`,
+  
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
