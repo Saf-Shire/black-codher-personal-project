@@ -10,7 +10,7 @@ const LandingPage = ({ addBootcamp }) => {
   const [message, setMessage] = useState(null);
 
   const searchDatabases = async () => {
-    const url = `http://localhost:5000/api/bootcamp?q=${searchOptions.company}`;
+    const url = `/api/bootcamp?q=${searchOptions.company}`;
     // const url =`http://localhost:5000/api/bootcamp?q=${query}`;
     const response = await axios.get(url);
     const data = response.data.bootcamp;

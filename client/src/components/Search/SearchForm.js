@@ -28,7 +28,7 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
     setSearchOptions(e.target.value);
     // setQuery(e.target.value);
     try {
-      const url = `http://localhost:5000/api/bootcamp?q=${e.target.value}`;
+      const url = `/api/bootcamp?q=${e.target.value}`;
       const response = await axios.get(url);
       const data = response.data.bootcamp;
       setMessage(null);
@@ -48,7 +48,7 @@ const SearchForm = ({ searchDatabases, addBootcamp }) => {
     setSearching(true);
     setParams(e.target.value);
     try {
-      const url = `http://localhost:5000/api/bootcamp?q=${e.target.value}`;
+      const url = `/api/bootcamp?q=${e.target.value}`;
       const response = await axios.get(url);
       const data = response.data.bootcamp;
       setBootcamps(data);
