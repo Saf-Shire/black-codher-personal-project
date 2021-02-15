@@ -1,8 +1,5 @@
 # Black Codher Personal Project
-  - [TechitOn](#techiton)
-  - [Usage](#usage)
-    - [Start The Development Server](#start-the-development-server)
-    - [Demo](#demo)
+
  
 ## 🚀  TechitOn
 A React application that allows users to search for a Web development Bootcamp and also seek out coding resources.
