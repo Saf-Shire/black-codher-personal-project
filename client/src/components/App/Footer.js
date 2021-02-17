@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <div className="footer-wrapper">
       <Container>
+        
         <div className="footer-content">
           <a href="/resources" target="_blank" className="footer-link">
             Resources

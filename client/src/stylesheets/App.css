@@ -74,14 +74,9 @@ h3{
 
 .button-wrapper{
   display: block;
-  justify-content: center;
+  text-align: center;
   padding-bottom:  1.5rem; 
-  margin-left: 24rem;
-  width:fit-content;
   
-}
-#link-btn{
-  align-items: center;
 }
 
 .copyright{
