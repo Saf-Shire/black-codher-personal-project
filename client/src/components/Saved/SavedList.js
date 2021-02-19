@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "@material-ui/core/Button";
-import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
+import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 import LanguageIcon from "@material-ui/icons/Language";
 import TimelapseIcon from "@material-ui/icons/Timelapse";
 import LocationIcon from "@material-ui/icons/LocationOn";
@@ -17,26 +17,27 @@ const SavedList = (props, { removeBootcamp }) => {
       return bootcamp._id !== id;
     });
     setSavedlist(newBootcamps);
-    removeBootcamp()//savedlist);
+    removeBootcamp(); //savedlist);
   }
 
   return (
     <React.Fragment>
       <div>
         {props.savedBootcamp.map((bootcamp) => (
-            <Card className="card">
+          <Card className="card">
             <div id="card-style" key={bootcamp._id}>
-              {
-                <Card.Img
-                  src={bootcamp.logo}
-                  alt={bootcamp.company}
-                  className="img"
-                />
-              }
               <Card.Body id="card-body">
-                <Card.Text className="card-title">
-                  {bootcamp.company} - {bootcamp.title}
-                </Card.Text>
+                <div className="img-inline">
+                  <Card.Img
+                    src={bootcamp.logo}
+                    alt={bootcamp.company}
+                    className="img"
+                  />
+                  <Card.Title className="card-title">
+                    {bootcamp.company} - {bootcamp.title}
+                  </Card.Title>
+                </div>
+
                 <Card.Text className="card-text">
                   <LocationIcon />
                   <span className="span-text">{bootcamp.city}</span>
@@ -53,6 +54,19 @@ const SavedList = (props, { removeBootcamp }) => {
                   <span className="span-text">£{bootcamp.tuitionFee}</span>
                 </Card.Text>
                 <Card.Text className="card-text">
+                  Help available:
+                  <span className="span-text">
+                    {bootcamp.availableHelp[0]}|{bootcamp.availableHelp[1]}
+                  </span>
+                </Card.Text>
+                <Card.Text className="card-text">
+                  Discounts available:
+                  <span className="span-text">
+                    {bootcamp.availableDiscounts[0]}|
+                    {bootcamp.availableDiscounts[1]}
+                  </span>
+                </Card.Text>
+                <Card.Text className="card-text">
                   <RotateRightOutlinedIcon />
                   <span className="span-text">
                     {bootcamp.applicationCycles} application cycle(s)
@@ -63,14 +77,6 @@ const SavedList = (props, { removeBootcamp }) => {
                   <span className="span-text">{bootcamp.emailAddress}</span>
                 </Card.Text>
                 <Button
-                    id="controlButtons"
-                    onClick={() => unfavouriteBootcamp(bootcamp._id)}
-                    size="large"
-                    endIcon={<RemoveCircleOutlineIcon/>}
-                  >
-                    Remove
-                  </Button>
-                <Button
                   className="link-btn"
                   href={bootcamp.applicationLink}
                   target="_blank"
@@ -78,6 +84,14 @@ const SavedList = (props, { removeBootcamp }) => {
                   endIcon={<LanguageIcon />}
                 >
                   Apply
+                </Button>
+                <Button
+                  id="controlButtons"
+                  onClick={() => unfavouriteBootcamp(bootcamp._id)}
+                  size="large"
+                  endIcon={<RemoveCircleOutlineIcon />}
+                >
+                  Remove
                 </Button>
               </Card.Body>
             </div>
